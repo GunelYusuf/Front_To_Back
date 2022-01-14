@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/CSS/product.css">
+    <link rel="stylesheet" href="/CSS/navbar.css">
+</head>
+<body>
+    <header class="head">
+        <div class="container">
+            <div class="row">
+    
+                <div class="col-3">
+                    <div class="logo">
+                        <div class="img">
+                            <a href="#" style="height: 25px">
+                                <img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h2-logo-1.png"
+                                    style="width: 212px; height:25px;" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9 display-none">
+                    <div class="navbar-icon">
+                        <div class="icon">
+                            <i class="fas fa-bars openSidebar"></i>
+                        </div>
+                    </div>
+                    <div class="navbar">
+                        <div class="close">
+                            <i class="fas fa-times"></i>
+                        </div>
+                        <div class="navbar-list">
+                            <ul>
+                                <li class="home">
+                                    <a href="#">Home</a><i class="fas fa-caret-right"></i>
+                                    <div class="sub_home">
+                                        <ul>
+                                            <li><a href="#">Main Home</a></li>
+                                            <li><a href="#">Grid Home</a></li>
+                                            <li><a href="#">Flower Shop</a></li>
+                                            <li><a href="#">Animated Slider</a></li>
+                                            <li><a href="#">Metro Showcase</a></li>
+                                            <li><a href="#">Carousel Showcase</a></li>
+                                            <li><a href="#">Landing</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="pages">
+                                    <a href="#">Pages</a><i class="fas fa-caret-right"></i>
+                                    <div class="sub_pages ">
+                                        <ul>
+                                            <li><a href="#">About Us</a></li>
+                                            <li><a href="#">FAQ Page</a></li>
+                                            <li><a href="#">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="shop">
+                                    <a href="#">Shop</a><i class="fas fa-caret-right"></i>
+                                    <div class="sub_shop">
+                                        <ul>
+                                            <li class="product_types">
+                                                <a href="#">Product Types</a><i class="fas fa-caret-right"></i>
+                                                <div class="sub_product_types">
+                                                    <ul>
+                                                        <li><a href="#">Standard Product</a></li>
+                                                        <li><a href="#">Grouped Product</a></li>
+                                                        <li><a href="#">Variable Product</a></li>
+                                                        <li><a href="#">Virtual Product</a></li>
+                                                        <li><a href="#">External Product</a></li>
+                                                        <li><a href="#">Downloadable Product</a></li>
+                                                        <li><a href="#">On Sale Product</a></li>
+                                                        <li><a href="#">Out of Stock Product</a></li>
+                                                        <li><a href="#">New Product</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="shop_pages">
+                                                <a href="#">Shop Pages</a><i class="fas fa-caret-right"></i>
+                                                <div class="sub_shop_pages ">
+                                                    <ul>
+                                                        <li><a href="#">My Account</a></li>
+                                                        <li><a href="#">Cart</a></li>
+                                                        <li><a href="#">Checkout</a></li>
+                                                        <li><a href="#">Orders</a></li>
+                                                        <li><a href="#">Downloads</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="shop_types">
+                                                <a href="#">Shop Types</a><i class="fas fa-caret-right"></i>
+                                                <div class="sub_shop_types">
+                                                    <ul>
+                                                        <li><a href="#">Product List</a></li>
+                                                        <li><a href="#">Without Sidebar</a></li>
+                                                        <li><a href="#">With Category Filter</a></li>
+                                                        <li><a href="#">With Ordering Filter</a></li>
+                                                        <li><a href="#">Shop Carousel</a></li>
+                                                        <li><a href="#">Product Categories</a></li>
+                                                        <li><a href="#">Single Category</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="shop_layouts">
+                                                <a href="#">Shop Layouts</a><i class="fas fa-caret-right"></i>
+                                                <div class="sub_shop_layouts">
+                                                    <ul>
+                                                        <li><a href="#">Two Columns Grid</a></li>
+                                                        <li><a href="#">Three Columns Grid</a></li>
+                                                        <li><a href="#">Four Columns Grid</a></li>
+                                                        <li><a href="#">Four Columns Wide</a></li>
+                                                        <li><a href="#">Five Columns Wide</a></li>
+                                                        <li><a href="#">Six Columns Wide</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="portfolio">
+                                    <a href="#">Portfolio</a><i class="fas fa-caret-right"></i>
+                                    <div class="sub_portfolio ">
+                                        <ul>
+                                            <li><a href="#">Standard</a></li>
+                                            <li><a href="#">Gallery</a></li>
+                                            <li><a href="#">Masonry</a></li>
+                                            <li class="portfolio_layouts">
+                                                <a href="#">Portfolio Layouts</a><i class="fas fa-caret-right"></i>
+                                                <div class="sub_portfolio_layouts ">
+                                                    <ul>
+                                                        <li><a href="#">Two Columns</a></li>
+                                                        <li><a href="#">Three Columns</a></li>
+                                                        <li><a href="#">Four Columns</a></li>
+                                                        <li><a href="#">Four Columns Wide</a></li>
+                                                        <li><a href="#">Five Columns Wide</a></li>
+                                                        <li class="portfolio_single">
+                                                            <a href="#">Portfolio Single</a>
+                                                            <div class="sub_portfolio_single ">
+                                                                <ul>
+                                                                    <li><a href="#">Small Images</a></li>
+                                                                    <li><a href="#">Small Slider</a></li>
+                                                                    <li><a href="#">Big Images</a></li>
+                                                                    <li><a href="#">Big Slider</a></li>
+                                                                    <li><a href="#">Gallery</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="portfolio_single">
+                                                <a href="#">Portfolio Single</a><i class="fas fa-caret-right"></i>
+                                                <div class="sub_portfolio_single ">
+                                                    <ul>
+                                                        <li><a href="#">Small Images</a></li>
+                                                        <li><a href="#">Small Slider</a></li>
+                                                        <li><a href="#">Big Images</a></li>
+                                                        <li><a href="#">Big Slider</a></li>
+                                                        <li><a href="#">Gallery</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="blog">
+                                    <a href="#">Blog</a><i class="fas fa-caret-right"></i>
+                                    <div class="sub_blog ">
+                                        <ul>
+                                            <li><a href="#">Masonry</a></li>
+                                            <li><a href="#">Standard</a></li>
+                                            <li class="post_types">
+                                                <a href="#">Post Types</a><i class="fas fa-caret-right"></i>
+                                                <div class="sub_post_types ">
+                                                    <ul>
+                                                        <li><a href="#">Standard</a></li>
+                                                        <li><a href="#">Gallery</a></li>
+                                                        <li><a href="#">Link</a></li>
+                                                        <li><a href="#">Quote</a></li>
+                                                        <li><a href="#">Audio</a></li>
+                                                        <li><a href="#">Video</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="elements">
+                                    <a href="#">Elements</a><i class="fas fa-caret-right"></i>
+                                    <div class="sub_elements ">
+                                        <ul>
+                                            <li class="classic">
+                                                <a href="#">Classic</a><i class="fas fa-caret-right"></i>
+                                                <div class="sub_classic ">
+                                                    <ul>
+                                                        <li><a href="#">Accordions</a></li>
+                                                        <li><a href="#">Tabs</a></li>
+                                                        <li><a href="#">Buttons</a></li>
+                                                        <li><a href="#">Video Button</a></li>
+                                                        <li><a href="#">Contact Form</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="infographic">
+                                                <a href="#">Infographic</a><i class="fas fa-caret-right"></i>
+                                                <div class="sub_infographic ">
+                                                    <ul>
+                                                        <li><a href="#">Blog List</a></li>
+                                                        <li><a href="#">Counters</a></li>
+                                                        <li><a href="#">Countdown</a></li>
+                                                        <li><a href="#">Google Maps</a></li>
+                                                        <li><a href="#">Progress Bar</a></li>
+                                                        <li><a href="#">Pie Charts</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="interactive">
+                                                <a href="#">Interactive</a><i class="fas fa-caret-right"></i>
+                                                <div class="sub_interactive ">
+                                                    <ul>
+                                                        <li><a href="#">Image Gallery</a></li>
+                                                        <li><a href="#">Testimonials</a></li>
+                                                        <li><a href="#">Team</a></li>
+                                                        <li><a href="#">Banner</a></li>
+                                                        <li><a href="#">Shop List</a></li>
+                                                        <li><a href="#">Portfolio List</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="typography">
+                                                <a href="#">Typography</a><i class="fas fa-caret-right"></i>
+                                                <div class="sub_typography ">
+                                                    <ul>
+                                                        <li><a href="#">Headings</a></li>
+                                                        <li><a href="#">Columns</a></li>
+                                                        <li><a href="#">Section Title</a></li>
+                                                        <li><a href="#">Blockquote</a></li>
+                                                        <li><a href="#">Dropcaps</a></li>
+                                                        <li><a href="#">Highlights</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <nav>
+                        <ul class="d-flex p-0 m-0 justify-content-around">
+                            <li class="home">
+                                <a href="#" class="selected">Home</a>
+                                <div class="sub_home">
+                                    <ul>
+                                        <li><a href="#">Main Home</a></li>
+                                        <li><a href="#">Grid Home</a></li>
+                                        <li><a href="#">Flower Shop</a></li>
+                                        <li><a href="#">Animated Slider</a></li>
+                                        <li><a href="#">Metro Showcase</a></li>
+                                        <li><a href="#">Carousel Showcase</a></li>
+                                        <li><a href="#">Landing</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="pages">
+                                <a href="#">Pages</a>
+                                <div class="sub_pages">
+                                    <ul>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">FAQ Page</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="shop">
+                                <a href="#">Shop</a>
+                                <div class="sub_shop d-flex">
+                                    <ul class="product_types">
+                                        <h4>Product Types</h4>
+                                        <li><a href="#">Standard Product</a></li>
+                                        <li><a href="#">Grouped Product</a></li>
+                                        <li><a href="#">Variable Product</a></li>
+                                        <li><a href="#">Virtual Product</a></li>
+                                        <li><a href="#">External Product</a></li>
+                                        <li><a href="#">Downloadable Product</a></li>
+                                        <li><a href="#">On Sale Product</a></li>
+                                        <li><a href="#">Out Of Stock Product</a></li>
+                                        <li><a href="#">New Product</a></li>
+                                    </ul>
+                                    <ul class="shop_pages">
+                                        <h4>Shop Pages</h4>
+                                        <li><a href="#">My Account</a></li>
+                                        <li><a href="#">Cart</a></li>
+                                        <li><a href="#">Checkout</a></li>
+                                        <li><a href="#">Orders</a></li>
+                                        <li><a href="#">Downloads</a></li>
+                                    </ul>
+                                    <ul class="shop_types">
+                                        <h4>Shop Types</h4>
+                                        <li><a href="/Product-List/product.html" target="_blank">Product List</a></li>
+                                        <li><a href="#">Without Sidebar</a></li>
+                                        <li><a href="#">With Category Filter</a></li>
+                                        <li><a href="#">With Ordering Filter</a></li>
+                                        <li><a href="#">Shop Carousel</a></li>
+                                        <li><a href="#">Product Categories</a></li>
+                                        <li><a href="#">Single Category</a></li>
+    
+                                    </ul>
+                                    <ul class="shop_layouts">
+                                        <h4>Shop Layouts</h4>
+                                        <li><a href="#">Two Columns Grid</a></li>
+                                        <li><a href="#">Three Columns Grid</a></li>
+                                        <li><a href="#">Four Columns Grid</a></li>
+                                        <li><a href="#">Four Columns Wide</a></li>
+                                        <li><a href="#">Five Columns Wide</a></li>
+                                        <li><a href="#">Six Columns Wide</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="portfolio">
+                                <a href="#">Portfolio</a>
+                                <div class="sub_portfolio">
+                                    <ul>
+                                        <li><a href="#">Standard</a></li>
+                                        <li><a href="#">Gallery</a></li>
+                                        <li><a href="#">Masonry</a></li>
+                                        <li class="portfolio_layouts">
+                                            <a href="#">Portfolio Layouts</a><i class="fas fa-chevron-right"></i>
+                                            <div class="sub_portfolio_layouts">
+                                                <ul>
+                                                    <li><a href="#">Two Columns</a></li>
+                                                    <li><a href="#">Three Columns</a></li>
+                                                    <li><a href="#">Four Columns</a></li>
+                                                    <li><a href="#">Four Columns Wide</a></li>
+                                                    <li><a href="#">Five Columns Wide</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="portfolio_single">
+                                            <a href="#">Portfolio Single</a><i class="fas fa-chevron-right"></i>
+                                            <div class="sub_portfolio_single">
+                                                <ul>
+                                                    <li><a href="#">Small Images</a></li>
+                                                    <li><a href="#">Small Slider</a></li>
+                                                    <li><a href="#">Big Images</a></li>
+                                                    <li><a href="#">Big Slider</a></li>
+                                                    <li><a href="#">Gallery</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="blog">
+                                <a href="#">Blog</a>
+                                <div class="sub_blog">
+                                    <ul>
+                                        <li><a href="#">Masonry</a></li>
+                                        <li><a href="#">Standard</a></li>
+                                        <li class="post_types">
+                                            <a href="#">Post Types</a><i class="fas fa-chevron-right"></i>
+                                            <div class="sub_post_types">
+                                                <ul>
+                                                    <li><a href="#">Standard</a></li>
+                                                    <li><a href="#">Gallery</a></li>
+                                                    <li><a href="#">Link</a></li>
+                                                    <li><a href="#">Quote</a></li>
+                                                    <li><a href="#">Audio</a></li>
+                                                    <li><a href="#">Video</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="elements">
+                                <a href="#">Elements</a>
+                                <div class="sub_elements">
+                                    <ul>
+                                        <li class="classic">
+                                            <i class="fas fa-chevron-left"></i><a href="#">Classic</a>
+                                            <div class="sub_classic">
+                                                <ul>
+                                                    <li><a href="/accordions.html" target="_blank">Accordions</a></li>
+                                                    <li><a href="/tabs.html" target="_blank">Tabs</a></li>
+                                                    <li><a href="#">Buttons</a></li>
+                                                    <li><a href="#">Video Buttons</a></li>
+                                                    <li><a href="#">Contact Form</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="infographic">
+                                            <i class="fas fa-chevron-left"></i><a href="#">Infographic</a>
+                                            <div class="sub_infographic">
+                                                <ul>
+                                                    <li><a href="#">Blog Lists</a></li>
+                                                    <li><a href="#">Counters</a></li>
+                                                    <li><a href="#">Countdown</a></li>
+                                                    <li><a href="/progressbar.html" target="_blank">Progress Bar</a></li>
+                                                    <li><a href="#">Pie Charts</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="interactive">
+                                            <i class="fas fa-chevron-left"></i><a href="#">Interactive</a>
+                                            <div class="sub_interactive">
+                                                <ul>
+                                                    <li><a href="#">Image Gallery</a></li>
+                                                    <li><a href="#">Testimonials</a></li>
+                                                    <li><a href="#">Team</a></li>
+                                                    <li><a href="#">Banner</a></li>
+                                                    <li><a href="/shop-list.html" target="_blank">Shop List</a></li>
+                                                    <li><a href="#">Portfolio List</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="typography">
+                                            <i class="fas fa-chevron-left"></i><a href="#">Typography</a>
+                                            <div class="sub_typography">
+                                                <ul>
+                                                    <li><a href="#">Headings</a></li>
+                                                    <li><a href="">Columns</a></li>
+                                                    <li><a href="">Section Title</a></li>
+                                                    <li><a href="">Blockquote</a></li>
+                                                    <li><a href="">Dropcaps</a></li>
+                                                    <li><a href="">Highlights</a></li>
+                                                    <li><a href="">Separators</a></li>
+                                                    <li><a href="">Custom Font</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-2">
+                    <div class="search-basket">
+                        <div class="row justify-content-around">
+                            <div class="search">
+                                <i class="fas fa-search"></i>
+                                <div class="searchArea">
+                                    <form class="d-flex">
+                                        <input type="text" placeholder="Search">
+                                        <button type="submit"><i class="fas fa-search"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="basket">
+                                <a href="basket.html" target="_blank"><i class="fas fa-shopping-bag"></i><sup
+                                        id="productCount">0</sup></a>
+                                <span class="cart">Cart</span>
+                                <span>($</span>
+                                <span id="totalPrice">0</span>
+                                <span>)</span>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="product-list-title">
+            <div class="container px-3">
+                <div class="title">
+                    <h1>Product List</h1>
+                    <p>Where flowers are our inspiration</p>
+                </div>
+            </div>
+        </section>
+        <section id="orangeAmaryllis">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-12">
+                        <div class="orange-image d-flex">
+                            <div class="mini-images">
+                                <div class="image">
+                                    <img src="./Orange-img/orange1.jpeg" alt="">
+                                </div>
+                                <div class="image">
+                                    <img src="./Orange-img/orange2.jpeg" alt="">
+                                </div>
+                                <div class="image">
+                                    <img src="./Orange-img/orange3.jpeg" alt="">
+                                </div>
+                                <div class="image">
+                                    <img src="./Orange-img/orange4.jpeg" alt="">
+                                </div>
+                            </div>
+                            <div class="big-image">
+                                <div class="image">
+                                    <img src="./Orange-img/orangeBig.jpeg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-12">
+                        <div class="content">
+                            <h2>Orange Amaryllis</h2>
+                            <span>$259</span>
+                            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a
+                                augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc.</p>
+                            <div class="quantityAdd d-flex">
+                                <div class="col-lg-7 col-md-12 col-sm-7 p-0">
+                                    <div class="quantity d-flex justify-content-between">
+                                        <span>Quantity</span>
+                                        <div class="quantity-number">
+                                            <i id="countminus" class="fas fa-caret-left"></i>
+                                            <span id="productcount" class="productCount">1</span>
+                                            <i id="countplus" class="fas fa-caret-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-12 col-sm-5 p-0">
+                                    <button type="submit" class="add-cart addBasket2">
+                                        Add to cart
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <p>SKU: <span>989873</span></p>
+                                <p>Categories: <span>Various, Exotic</span></p>
+                                <p>Tags: <span>Llilies, Orchids</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section id="product-tab-menu">
+        <div class="container">
+                <div class="row px-3">
+                    <div class="col-12">
+                        <div class="menus d-flex">
+                            <div class="menu selected" data-id="1a">
+                                Description
+                            </div>
+                            <div class="menu" data-id="2a">
+                                Additional information
+                            </div>
+                            <div class="menu" data-id="3a">
+                                Reviews (2)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                       <div class="contents">
+                            <div class="content" id="1a">
+                                <h3>The power of flowers</h3>
+                                <p class="m-0">
+                                    Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+                                    nulla
+                                    ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
+                                    augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas
+                                    tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing
+                                    sem
+                                    neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
+                                    Maecenas nec odio et ante
+                                </p>
+                            </div>
+                            <div class="content" id="2a" style="display: none;">
+                                <p class="m-0"><strong>Weight:</strong> <span>1 kg</span></p>
+                                <p class="m-0"><strong>Dimensions:</strong> <span>30 x 30 x 50 cm</span></p>
+                            </div>
+                            <div class="content" id="3a" style="display: none;">
+                                <div class="reviews">
+                                    <h2>Reviews</h2>
+                                    <div class="comments">
+                                        <div class="comment-area mb-3 d-flex">
+                                            <div class="col-lg-1 col-md-2 col-3 px-2">
+                                                <div class="image">
+                                                    <img src="/Products-Images/product-expert-imG1.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-11 col-md-10 col-9">
+                                                <div class="comment">
+                                                    <p class="mb-2">
+                                                        <strong>Joshua Garcia </strong>
+                                                        <span>27.04.2018</span>
+                                                    </p>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                                                        commodo ligula eget dolor. Aenean massa. Cum sociis Theme
+                                                        natoque
+                                                        penatibus et magnis dis parturient montes, nascetur ridiculus
+                                                        mus.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-area d-flex">
+                                            <div class="col-lg-1 col-md-2 col-3 px-2">
+                                                <div class="image">
+                                                    <img src="/Products-Images/product-expert-img2.png" alt="Commenter">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-11 col-md-10 col-9">
+                                                <div class="comment">
+                                                    <p class="mb-2">
+                                                        <strong>Joan Stanley</strong>
+                                                        <span>27.04.2018</span>
+                                                    </p>
+                                                    <p>
+                                                        Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus,
+                                                        sem
+                                                        quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam
+                                                        quam nunc, blandit vel, luctus pulvinar, hendrerit
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="add_reviews">
+                                    <h2>Add a review</h2>
+                                    <div class="review">
+                                        <p>Your email address will not be published. Required fields are marked
+                                            <sup>*</sup>
+                                        </p>
+                                        <form action="#" class="form-group">
+                                            <div>
+                                                <label>Your review <sup>*</sup></label><br>
+                                                <textarea name="your_review" id="your_review" cols="45" rows="8" aria-required="true"
+                                                    required></textarea>
+                                            </div>
+                                            <div>
+                                                <label>Name<sup>*</sup></label>
+                                                <input class="form-control" type="text" id="author" name="author" size="30" aria-required="true"
+                                                    required>
+                                            </div>
+                                            <div>
+                                                <label>Email<sup>*</sup></label>
+                                                <input class="form-control" type="email" id="email" name="email" size="30" aria-required="true"
+                                                    required>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" value="yes" id="" name="">
+                                            </div>
+                                            <p>Save my name, email, and website in this browser for the next time I
+                                                comment.</p>
+                                            <input class="button" type="submit" name="submit" id="submit" value="submit">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+        <section id="related-products">
+            <div class="container p-0">
+                <div class="row w-100 m-0 p-0">
+                    <h2>RELATED PRODUCTS</h2>
+                    <div class="product-list various" id="4a">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-xs-12">
+                                <div class="card">
+                                    <div class="image">
+                                        <img src="../Products-Images/card-dibcek-img.jpeg" alt="">
+                                        <div class="info">
+                                            <span>Sold</span>
+                                        </div>
+                                    </div>
+                                    <div class="title text-center">
+                                        <p>SWEET ALYSSUM</p>
+                                        <div class="add-cart">
+                                            <p>Read more</p>
+                                        </div>
+                                        <div class="price">
+                                            <span>$</span>
+                                            <span class="totalPrice">259</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-xs-12">
+                                <div class="card">
+                                    <div class="image">
+                                        <img src="../Products-Images/WILD-CACTUS.jpeg" alt="">
+                                        <div class="info sale">
+                                            <span>Sale</span>
+                                        </div>
+                                    </div>
+                                    <div class="title text-center">
+                                        <p>WILD CACTUS</p>
+                                        <div class="add-cart">
+                                            <p class="addBasket">Add to cart</p>
+                                        </div>
+                                        <div class="price">
+                                            <span><del>$259</del></span>
+                                            <span>$</span>
+                                            <span class="totalPrice">159</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-xs-12">
+                                <div class="card">
+                                    <div class="image">
+                                        <img src="../Products-Images/tulpan.jpeg"  alt="">
+                                    </div>
+                                    <div class="title text-center">
+                                        <p>COLORFUL TULIPS</p>
+                                        <div class="add-cart">
+                                            <p class="addBasket">Add to cart</p>
+                                        </div>
+                                        <div class="price">
+                                            <span>$</span>
+                                            <span class="totalPrice">350</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-xs-12">
+                                <div class="card">
+                                    <div class="image">
+                                        <img src="../Products-Images/card-kaktus-img.jpeg"  alt="">
+                                        <div class="info new">
+                                            <span>Sale</span>
+                                        </div>
+                                    </div>
+                                    <div class="title text-center">
+                                        <p>SCHEFFLERA</p>
+                                        <div class="add-cart">
+                                            <p class="addBasket">Add to cart</p>
+                                        </div>
+                                        <div class="price">
+                                            <span>$</span>
+                                            <span class="totalPrice">259</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>  
+    <footer>
+        <div class="container">
+            <div class="footer-items pb-5">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-item pt-3">
+                            <h6>CUSTOMER SERVICE</h6>
+                            <ul class="p-0 mt-4">
+                                <li class="pb-1"><a href="#">Help & Contact Us</a></li class="pb-1">
+                                <li class="pb-1"><a href="#">Returns & Refunds</a></li>
+                                <li class="pb-1"><a href="#">Online Stores</a></li>
+                                <li class="pb-1"><a href="#">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-item pt-3">
+                            <h6>COMPANY</h6>
+                            <ul class="p-0 mt-4">
+                                <li class="pb-1"><a href="#">About Us</a></li class="pb-2">
+                                <li class="pb-1"><a href="#">Blog</a></li>
+                                <li class="pb-1"><a href="#">Order Tracking</a></li>
+                                <li class="pb-1"><a href="#">FAQ Page</a></li>
+                                <li class="pb-1"><a href="#">Contact Us</a></li>
+                                <li class="pb-1"><a href="#">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-item pt-3">
+                            <h6>SOCIAL MEDIA</h6>
+                            <ul class="p-0 mt-4">
+                                <li class="pb-1"><a href="#">Twitter</a></li class="pb-2">
+                                <li class="pb-1"><a href="#">Instagram</a></li>
+                                <li class="pb-1"><a href="#">Tumblr</a></li>
+                                <li class="pb-1"><a href="#">Pinterest</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-item pt-3">
+                            <h6>ARCHIVE</h6>
+                            <ul class="p-0 mt-4">
+                                <li class="pb-1"><a href="#">Designer Shoes</a></li>
+                                <li class="pb-1"><a href="#">Gallery</a></li>
+                                <li class="pb-1"><a href="#">Pricing</a></li class="pb-2">
+                                <li class="pb-1"><a href="#">Feature Index</a></li>
+                                <li class="pb-1"><a href="#">Login</a></li>
+                                <li class="pb-1"><a href="#">Help & Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright pt-3 d-flex justify-content-between">
+                <div class="copyright-title pb-3">
+                    <span>Powered by <a href="#">Mikado Themes</a> 2018</span>
+                </div>
+                <div class="img pb-3">
+                    <a href="#">
+                        <img src="../footer-img/visa-card.png" alt="">
+                    </a>
+                </div>
+                <div class="social-medias pb-3">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="/JS/product.js"></script>
+<script src="/JS/navbar.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</html>

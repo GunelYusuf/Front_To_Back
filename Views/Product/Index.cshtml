@@ -1,0 +1,14 @@
+﻿@model IEnumerable<PRODUCTS1>
+
+<input type="hidden" id="count" value="@ViewBag.ProductCount" />
+<section id="allProducts">
+    <div class="container p-0">
+        <div class="row w-100 m-0 p-0" id="#productrow">
+           <partial name="_ProductPartial">
+        </div>
+       <div class="row justify-content-center mt-3">
+            <button id="loadMore" class="btn btn-success">Load More..</button>
+        </div>
+    </div>
+
+</section>

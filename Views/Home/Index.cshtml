@@ -1,0 +1,286 @@
+﻿@model HomeVM
+
+<main>
+    <section id="bigSlider" style="width: 100%; height: 474px;">
+        <div class="title">
+            <h2> @Html.Raw(Model.SliderTitles.Title) </h2>
+            <p>
+                @Model.SliderTitles.Description
+            </p>
+            <img src="~/Main-Images/@Model.SliderTitles.ImageUrl" alt="">
+        </div>
+    </section>
+    <section id="products-card">
+        <div class="container p-0">
+            <div class="row w-100 m-0 p-0">
+                <div class="productAllNav w-100 d-flex justify-content-between">
+                    <div class="products-navbar">
+                        <h6>Categories <i class="fas fa-caret-down"></i></h6>
+                        <ul>
+                            <li data-id="1"><a class="selected" style="color:#f34f3f">All</a></li>
+                          
+                            @foreach (var item in Model.cATEGORies)
+                             {
+                                 <li data-id="@item.DataId"><a>@item.Name</a></li>
+                             }
+                         </ul>
+                    </div>
+                    <div class="filter">
+                        <span>Filter</span>
+                        <i class="fas fa-caret-down"></i>
+                        <div class="sub-filter d-flex">
+                            <ul>
+                                <h4>Sort By</h4>
+                                <li><a href="#">Default</a></li>
+                                <li><a href="#">Popularity</a></li>
+                                <li><a href="#">Newness</a></li>
+                                <li><a href="#">Price: Low To High</a></li>
+                                <li><a href="#">Price: High To Low</a></li>
+                            </ul>
+                            <ul>
+                                <h4>Price Range</h4>
+                                <li><a href="#">All</a></li>
+                                <li><a href="#">$0-$10</a></li>
+                                <li><a href="#">$10-$20</a></li>
+                                <li><a href="#">$20-$30</a></li>
+                                <li><a href="#">$30-$40</a></li>
+                                <li><a href="#">40$+</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="allProducts">
+        <div class="container p-0">
+            <div class="row w-100 m-0 p-0">
+                <div class="product-list all same_product" data-id="1">
+                    <div class="row">
+                        @foreach (var item in Model.pRODUCTS1s)
+                        {
+                            <div class="col-lg-3 col-md-6 col-xs-12">
+                                <div class="card" data-id="@item.CATEGORY1.DataId">
+                                    <div class="image">
+                                        <img src="~/Products-Images/@item.ImageUrl" alt="">
+                                    </div>
+                                    <div class="title text-center">
+                                        <p>@item.Name</p>
+                                        <div class="add-cart">
+                                            <p class="addBasket">Add to cart</p>
+                                        </div>
+                                        <div class="price">
+                                            <span>$</span>
+                                            <span class="totalPrice">@item.Price</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                </div>
+            </div>
+            @foreach (var item in Model.pRODUCTS1s)
+            {
+                <div class="product-list @item.CATEGORY1.Name.ToLower() d-none same_product" data-id="@item.CATEGORY1.DataId">
+                    @*<div class="row">*@
+                    <div class="col-lg-3 col-md-6 col-xs-12">
+                        <div class="card">
+                            <div class="image">
+                                <img src="~/Products-Images/@item.ImageUrl" alt="">
+                            </div>
+                            <div class="title text-center">
+                                <p>@item.Name</p>
+                                <div class="add-cart">
+                                    <p class="addBasket">Add to cart</p>
+                                </div>
+                                <div class="price">
+                                    <span>$</span>
+                                    <span class="totalPrice">@item.Price</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @*</div>*@
+                </div>
+            }
+        </div>
+    </section>
+    <section id="video">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="video">
+                        <div class="image">
+                            <a href="@Model.About.VideoUrl">
+                                <img src="~/Video-Img/@Model.About.ImageUrl" alt="Video">
+                                <div class="play">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="content">
+                        <h2>@Html.Raw(Model.About.Title)</h2>
+                        <p>
+                            @Model.About.Description
+                        </p>
+                        <div class="title">
+                            <div class="img"><img src="~/Video-Img/uheart.png"></div>
+                            <p>Hand picked just for you.</p><br>
+
+                            <div class="img"><img src="~/Video-Img/uheart.png"></div>
+                            <p>Unique flower arrangements</p><br>
+
+                            <div class="img"><img src="~/Video-Img/uheart.png"></div>
+                            <p>Best way to say you care.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="expertArea">
+        <div class="container">
+            <div class="text text-center">
+                <div class="col-lg-6 col-12 m-auto">
+                    <h2 class="mb-4">Flower Experts</h2>
+                    <p>
+                        A perfect blend of creativity, energy, communication, happiness and love. Let us arrange a
+                        smile for you.
+                    </p>
+                </div>
+            </div>
+            <div class="experts">
+                <div class="row">
+
+                    @foreach (var item in Model.FlowerExperts)
+                    {
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="expert text-center">
+                                <div class="img">
+                                    <img src="~/expert img/@item.ImageUrl" alt="CRYSTAL BROOKS">
+                                </div>
+                                <div class="content p-4">
+                                    <h6 class="m-0">@item.Name</h6>
+                                    <span>Florist</span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="join" style="background-image: url( ../Join_img/JoinGirls.jpeg);">
+        <div class="container">
+            <div class="join-us text-center">
+                <div class="title mb-4">
+                    <h3>Join The Colorful Bunch!</h3>
+                </div>
+                <div class="searchArea d-flex justify-content-center">
+                    <div class="search-input">
+                        <input id="emailAddress" type="email" name="email-address" placeholder="Email Address">
+                    </div>
+                    <div class="search-button">
+                        <button id="submitEmail" class="submit" type="submit">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="fromOurBlog">
+        <div class="container">
+            <div class="blogTitle text-center">
+                <div class="col-lg-6 col-12 m-auto">
+                    <h2 class="mb-4">From our Blog</h2>
+                    <p>
+                        A perfect blend of creativity, energy, communication, happiness and love. Let us arrange a
+                        smile for you.
+                    </p>
+                </div>
+            </div>
+
+            <div class="blog-cards">
+                <div class="row">
+                    @foreach (var item in Model.Blogs)
+                    {
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="b-card">
+                                <div class="img">
+                                    <a href="#"><img src="~/Blog_img/@item.ImageUrl" alt="Flower Power"></a>
+                                    <div class="date">
+                                        <a href="#">@item.Date</a>
+                                    </div>
+                                </div>
+                                <div class="content text-center p-4">
+                                    <h5>
+                                        <a href="#">
+                                            @item.Title
+                                        </a>
+                                    </h5>
+                                    <p>@item.Description</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="florist-slider1">
+        <div class="container">
+
+            <div class="row">
+                <div class="slider multiple-items">
+                    @for (int i = 0; i < Model.sliderMain2s.Count; i++)
+                    {
+                        if (i == 0)
+                        {
+                            <div class="item text-center Anna">
+                                <div class="image">
+                                    <img src="~/Florist-img/@Model.sliderMain2s[i].ImageUrl" alt="Florist image">
+                                </div>
+                                <div class="title">
+                                    <p>
+                                        @Model.sliderMain2s[i].Description
+                                    </p>
+                                    <span class="floristName"> @Model.sliderMain2s[i].Name</span>
+                                    <br>
+                                    <span> @Model.sliderMain2s[i].Profession</span>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+
+                            <div class="item text-center Jasmine" style="display: none;">
+                                <div class="image">
+                                    <img src="~/Florist-img/@Model.sliderMain2s[i].ImageUrl" alt="Florist image">
+                                </div>
+                                <div class="title">
+                                    <p>
+                                        @Model.sliderMain2s[i].Description
+                                    </p>
+                                    <span class="floristName">@Model.sliderMain2s[i].Name</span>
+                                    <br>
+                                    <span>@Model.sliderMain2s[i].Profession</span>
+                                </div>
+                            </div>
+                        }
+                    }
+
+                    <span id="arrowLeft" class="arrows"><i class="fal fa-arrow-left "></i></span>
+                    <span id="arrowRight" class="arrows"><i class="fal fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

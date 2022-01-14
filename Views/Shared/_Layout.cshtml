@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiorello</title>
+    <link rel="stylesheet" href="~/vegas/vegas.min.css">
+    <link rel="stylesheet" href="~/CSS/navbar.css">
+    <link rel="stylesheet" href="~/CSS/main.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+   
+    <script src="https://kit.fontawesome.com/5563866a19.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+    @await Component.InvokeAsync("Header");
+    @RenderBody()
+    @await Component.InvokeAsync("Footer");
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="~/vegas/vegas.min.js"></script>
+    <script src="~/JS/navbar.js"></script>
+    <script src="~/JS/main.js"></script>
+
+    <script>$("#bigSlider").vegas({
+            slides: [
+                { src: "/Main-Images/main-slider1.jpeg" },
+                { src: "/Main-Images/main-slider2.jpeg" },
+                { src: "/Main-Images/main-slider-3.jpeg" }
+            ]
+        });</script>
+
+</body>
+
+
+
+
+</html>
+
+

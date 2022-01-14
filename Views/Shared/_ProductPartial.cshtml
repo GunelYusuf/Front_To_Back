@@ -1,0 +1,23 @@
+﻿@model IEnumerable<PRODUCTS1>
+@foreach (var item in Model)
+{
+    <div class="product-list @item.CATEGORY1.Name.ToLower() d-none same_product" data-id="@item.CATEGORY1?.DataId">
+        <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="card" data-id="@item.CATEGORY1?.DataId">
+                <div class="image">
+                    <img src="~/Products-Images/@item.ImageUrl" alt="">
+                </div>
+                <div class="title text-center">
+                    <p>@item.Name</p>
+                    <div class="add-cart">
+                        <p class="addBasket">Add to cart</p>
+                    </div>
+                    <div class="price">
+                        <span>$</span>
+                        <span class="totalPrice">@item.Price</span>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+}

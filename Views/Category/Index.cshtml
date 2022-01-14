@@ -1,0 +1,15 @@
+﻿@model IEnumerable<CATEGORY1> 
+
+@foreach (var cATEGORY in Model)
+{
+    <p>@cATEGORY.Name
+
+    <ul>
+        @foreach (var item in cATEGORY.pRODUCTS1s)
+        {
+            <li>@item.Name</li>
+        }
+    </ul>
+
+    </p>
+}
