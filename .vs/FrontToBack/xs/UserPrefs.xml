@@ -1,12 +1,8 @@
 ﻿<Properties StartupConfiguration="{8A866B83-CC8F-4F24-8043-6EB8BD17C84F}|FrontToBack">
   <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Areas/AdminArea/Views/Category/Create.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Areas/AdminArea/Controllers/CategoryController.cs">
     <Files>
-      <File FileName="Areas/AdminArea/Controllers/CategoryController.cs" Line="42" Column="34" />
-      <File FileName="Areas/AdminArea/Views/Category/Create.cshtml" Line="33" Column="111" />
-      <File FileName="Models/CATEGORY1.cs" Line="12" Column="59" />
-      <File FileName="Areas/AdminArea/Views/Shared/_AdminLayout.cshtml" Line="245" Column="30" />
-      <File FileName="Areas/AdminArea/Views/Shared/_Validation.cshtml" Line="1" Column="1" />
+      <File FileName="Areas/AdminArea/Controllers/CategoryController.cs" Line="91" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,11 +11,11 @@
             <Node name="FronToBack" expanded="True">
               <Node name="Areas" expanded="True">
                 <Node name="AdminArea" expanded="True">
-                  <Node name="Controllers" expanded="True" />
+                  <Node name="Controllers" expanded="True">
+                    <Node name="CategoryController.cs" selected="True" />
+                  </Node>
                   <Node name="Views" expanded="True">
-                    <Node name="Category" expanded="True">
-                      <Node name="Create.cshtml" selected="True" />
-                    </Node>
+                    <Node name="Category" expanded="True" />
                     <Node name="Dashboard" expanded="True" />
                     <Node name="Shared" expanded="True" />
                   </Node>

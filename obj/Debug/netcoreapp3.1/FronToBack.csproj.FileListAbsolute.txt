@@ -161,3 +161,4 @@
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.dll
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.pdb
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.genruntimeconfig.cache
+/Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Category/Update.cshtml.g.cs

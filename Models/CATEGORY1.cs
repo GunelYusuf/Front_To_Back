@@ -9,7 +9,7 @@ namespace FrontToBack.Models
         public int Id { get; set; }
         [Required(ErrorMessage = "do not leave empty")]
         public string Name{ get; set; }
-        [MaxLength(10,ErrorMessage= "Must be less than 100")]
+        [MinLength(10,ErrorMessage= "Must be less than 100")]
         public string Description { get; set; }
 
         public string DataId{ get; set; }

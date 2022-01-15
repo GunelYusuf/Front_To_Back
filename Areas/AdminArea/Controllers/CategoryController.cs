@@ -57,5 +57,37 @@ namespace FronToBack.Areas.AdminArea.Controllers
            await _context.SaveChangesAsync();
            return RedirectToAction(nameof(Index));
         }
+
+        public async Task<IActionResult> Update(int? id,string name)
+        {
+            if (id == null) return NotFound();
+            CATEGORY1 dbCategory = await _context.cATEGORies.FindAsync(id);
+            if (dbCategory == null) return NotFound();
+            return View(dbCategory);
+        }
+
+        [HttpPost]
+
+        public async Task<IActionResult> Update(CATEGORY1 category)
+        {
+            if (!ModelState.IsValid) return View();
+            bool isExist = _context.cATEGORies.Any(c => c.Name.ToLower().Trim() == category.Name.ToLower().Trim());
+            CATEGORY1 isExistCategory = _context.cATEGORies.FirstOrDefault(c => c.Id == category.Id);
+            if (isExist && !(isExistCategory.Name.ToLower() == category.Name.ToLower().Trim()))
+            {
+                ModelState.AddModelError("Name", "The category with this name already exists");
+                View();
+            }
+            {
+                isExistCategory.Name = category.Name;
+                isExistCategory.Description = category.Description;
+                await _context.SaveChangesAsync();
+
+
+                return RedirectToAction(nameof(Index));
+            }
+          
+
+        }
     }
 }
