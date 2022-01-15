@@ -2,9 +2,11 @@
   <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Areas/AdminArea/Views/Category/Create.cshtml">
     <Files>
-      <File FileName="Areas/AdminArea/Controllers/CategoryController.cs" Line="39" Column="27" />
-      <File FileName="Areas/AdminArea/Views/Category/Index.cshtml" Line="22" Column="48" />
-      <File FileName="Areas/AdminArea/Views/Category/Create.cshtml" Line="1" Column="1" />
+      <File FileName="Areas/AdminArea/Controllers/CategoryController.cs" Line="42" Column="34" />
+      <File FileName="Areas/AdminArea/Views/Category/Create.cshtml" Line="33" Column="111" />
+      <File FileName="Models/CATEGORY1.cs" Line="12" Column="59" />
+      <File FileName="Areas/AdminArea/Views/Shared/_AdminLayout.cshtml" Line="245" Column="30" />
+      <File FileName="Areas/AdminArea/Views/Shared/_Validation.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,10 +21,12 @@
                       <Node name="Create.cshtml" selected="True" />
                     </Node>
                     <Node name="Dashboard" expanded="True" />
+                    <Node name="Shared" expanded="True" />
                   </Node>
                 </Node>
               </Node>
               <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True" />
             </Node>

@@ -32,5 +32,18 @@ namespace FronToBack.Areas.AdminArea.Controllers
 
             return View(dbCategory);
         }
+
+        public IActionResult Create()
+        {
+            
+            return View();
+        }
+        [HttpPost]
+
+        public IActionResult Create(CATEGORY1 category)
+        {
+
+            return Content($"{category.Name} {category.Description}");
+        }
     }
 }

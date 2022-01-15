@@ -132,6 +132,7 @@
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.TagHelpers.input.cache
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.TagHelpers.output.cache
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.RazorCoreGenerate.cache
+/Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Category/Create.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Category/Detail.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Category/Index.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Dashboard/Index.cshtml.g.cs
