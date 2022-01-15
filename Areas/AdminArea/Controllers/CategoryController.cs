@@ -39,11 +39,23 @@ namespace FronToBack.Areas.AdminArea.Controllers
             return View();
         }
         [HttpPost]
-
-        public IActionResult Create(CATEGORY1 category)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(CATEGORY1 category)
         {
-
-            return Content($"{category.Name} {category.Description}");
+            bool isExist = _context.cATEGORies.Any(c => c.Name.ToLower().Trim() == category.Name.ToLower().Trim());
+            if (isExist)
+            {
+                ModelState.AddModelError("Name", "The category with this name already exists");
+                View();
+            }
+            CATEGORY1 newCategory = new CATEGORY1
+            {
+                Name = category.Name,
+                Description = category.Description
+            };
+           await _context.AddAsync(newCategory);
+           await _context.SaveChangesAsync();
+           return RedirectToAction(nameof(Index));
         }
     }
 }

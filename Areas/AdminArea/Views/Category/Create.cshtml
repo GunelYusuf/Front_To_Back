@@ -1,4 +1,4 @@
-﻿
+﻿@model CATEGORY1
 
 <div class="container">
     <div class="row">
@@ -9,18 +9,25 @@
                     <p class="card-description"> Create Category Form </p>
                     <form class="forms-sample" method="post">
                         <div class="form-group">
-                            <label for="Name">Name</label>
-                            <input type="text" class="form-control" name="Name" id="Name" placeholder="Name">
+                            <label asp-for="Name"></label>
+                            <input asp-for="Name" class="form-control" placeholder="Name">
+                            <span class="text-danger" asp-validation-for="Name"></span>
                         </div>
                         <div class="form-group">
-                            <label for="Description">Description</label>
-                            <textarea class="form-control" id="Description" name="Description" placeholder="Description"></textarea>
+                            <label asp-for="Description"></label>
+                            <textarea class="form-control" asp-for="Description" placeholder="Description"></textarea>
+                            <span class="text-danger" asp-validation-for="Description"></span>
                         </div>
-                        
+
                         <button class="btn btn-light">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
- </div>
+</div>
+
+@section Scripts{
+   <partial name="_Validation"></partial>
+}
+

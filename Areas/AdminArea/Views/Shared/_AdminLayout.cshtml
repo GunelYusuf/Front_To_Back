@@ -147,17 +147,17 @@
                         </a>
                     </li>
                     <li class="nav-item nav-category">
-                        <a class="nav-link" data-toggle="collapse" asp-controller="Dashboard" asp-action="Index"  aria-expanded="false" aria-controls="ui-basic">
-                           Dashboard
+                        <a class="nav-link" data-toggle="collapse" asp-controller="Dashboard" asp-action="Index" aria-expanded="false" aria-controls="ui-basic">
+                            Dashboard
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" asp-controller="Category" asp-action="Index"  aria-expanded="false" aria-controls="ui-basic">
+                        <a class="nav-link" data-toggle="collapse" asp-controller="Category" asp-action="Index" aria-expanded="false" aria-controls="ui-basic">
                             Categories
                         </a>
                     </li>
                     <li class="nav-item nav-category">
-                        <a class="nav-link" data-toggle="collapse" asp-controller="Product" asp-action="Index"   aria-expanded="false" aria-controls="ui-basic">
+                        <a class="nav-link" data-toggle="collapse" asp-controller="Product" asp-action="Index" aria-expanded="false" aria-controls="ui-basic">
                             Products
                         </a>
                     </li>
@@ -241,6 +241,7 @@
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->
+
     <script src="~/Admin/vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
@@ -255,6 +256,8 @@
     <!-- endinject -->
     <!-- Custom js for this page -->
     <script src="~/Admin/./js/dashboard.js"></script>
+    @RenderSection("Scripts", false)
+    @RenderSection("Css", false)
     <!-- End custom js for this page -->
 </body>
 </html>
