@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{8A866B83-CC8F-4F24-8043-6EB8BD17C84F}|FrontToBack">
+  <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Areas/AdminArea/Views/Category/Detail.cshtml">
+    <Files>
+      <File FileName="Areas/AdminArea/Controllers/CategoryController.cs" Line="33" Column="37" />
+      <File FileName="Areas/AdminArea/Views/Category/Index.cshtml" Line="22" Column="48" />
+      <File FileName="Controllers/HomeController.cs" Line="28" Column="48" />
+      <File FileName="Areas/AdminArea/Views/Dashboard/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Areas/AdminArea/Views/Category/Detail.cshtml" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FrontToBack" expanded="True">
+            <Node name="FronToBack" expanded="True">
+              <Node name="Areas" expanded="True">
+                <Node name="AdminArea" expanded="True">
+                  <Node name="Controllers" expanded="True" />
+                  <Node name="Views" expanded="True">
+                    <Node name="Category" expanded="True">
+                      <Node name="Detail.cshtml" selected="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

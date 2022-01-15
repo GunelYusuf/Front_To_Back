@@ -23,5 +23,14 @@ namespace FronToBack.Areas.AdminArea.Controllers
             List<CATEGORY1> categories = _context.cATEGORies.ToList();
             return View(categories);
         }
+
+        public async Task<IActionResult>Detail(int? Id)
+        {
+            if (Id == null) return NotFound();
+            CATEGORY1 dbCategory = await _context.cATEGORies.FindAsync(Id);
+            if (dbCategory == null) return NotFound();
+
+            return View(dbCategory);
+        }
     }
 }
