@@ -86,8 +86,20 @@ namespace FronToBack.Areas.AdminArea.Controllers
 
                 return RedirectToAction(nameof(Index));
             }
-          
-
         }
+      
+        public async Task<IActionResult>Remove(int? id)
+        {
+            if (id == null) return NotFound();
+            CATEGORY1 dbCategory = await _context.cATEGORies.FindAsync(id);
+            if (dbCategory == null) return NotFound();
+            _context.cATEGORies.Remove(dbCategory);
+            await _context.SaveChangesAsync();
+            return View();
+           
+        }
+    
+
+     
     }
 }
