@@ -2,11 +2,12 @@
   <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Areas/AdminArea/Controllers/SliderController.cs">
     <Files>
-      <File FileName="Areas/AdminArea/Controllers/SliderController.cs" Line="42" Column="1" />
+      <File FileName="Areas/AdminArea/Controllers/SliderController.cs" Line="60" Column="36" />
       <File FileName="Areas/AdminArea/Views/Slider/Index.cshtml" Line="4" Column="23" />
       <File FileName="Areas/AdminArea/Views/Shared/_AdminLayout.cshtml" Line="165" Column="44" />
       <File FileName="Models/Slider.cs" Line="15" Column="8" />
-      <File FileName="Areas/AdminArea/Views/Slider/Create.cshtml" Line="9" Column="68" />
+      <File FileName="Areas/AdminArea/Views/Slider/Create.cshtml" Line="10" Column="64" />
+      <File FileName="Startup.cs" Line="39" Column="55" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -40,7 +41,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/gunelyusubova/Desktop/FrontToBack/Areas/AdminArea/Controllers/SliderController.cs" relfile="Areas/AdminArea/Controllers/SliderController.cs" line="39" column="1" />
+      <Breakpoint file="/Users/gunelyusubova/Desktop/FrontToBack/Areas/AdminArea/Controllers/SliderController.cs" relfile="Areas/AdminArea/Controllers/SliderController.cs" line="40" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
