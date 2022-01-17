@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using FrontToBack.DAL;
@@ -55,12 +56,18 @@ namespace FronToBack.Areas.AdminArea.Controllers
                 return View();
             }
 
+
+            string root = _env.WebRootPath;
             string fileName = Guid.NewGuid() + slider.Photo.FileName;
-            bool isImage = slider.Photo.ContentType.Contains("image/");
-            string path = _env.WebRootPath;
+            string path = Path.Combine(root, "Main-Images", fileName);
+            FileStream fileStream = new FileStream(path,FileMode.Create);
+            await slider.Photo.CopyToAsync(fileStream);
+            Slider newSlider = new Slider();
+            newSlider.ImageUrl = fileName;
+            await _context.Sliders.AddAsync(newSlider);
+            await _context.SaveChangesAsync();
 
-
-            return Content(path);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
