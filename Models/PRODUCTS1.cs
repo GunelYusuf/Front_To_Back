@@ -11,6 +11,8 @@ namespace FrontToBack.Models
 
         public double Price { get; set; }
 
+        public int CATEGORY1Id { get; set; }
+
         public virtual CATEGORY1 CATEGORY1 { get; set; }
 
       

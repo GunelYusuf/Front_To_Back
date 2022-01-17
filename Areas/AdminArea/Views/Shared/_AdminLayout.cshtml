@@ -147,17 +147,22 @@
                         </a>
                     </li>
                     <li class="nav-item nav-category">
-                        <a class="nav-link" data-toggle="collapse" asp-controller="Dashboard" asp-action="Index" aria-expanded="false" aria-controls="ui-basic">
+                        <a class="nav-link" asp-area="AdminArea" asp-controller="Dashboard" asp-action="Index" >
                             Dashboard
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" asp-controller="Category" asp-action="Index" aria-expanded="false" aria-controls="ui-basic">
+                        <a class="nav-link" asp-area="AdminArea" asp-controller="Category" asp-action="Index">
                             Categories
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="AdminArea" asp-controller="Slider" asp-action="Index">
+                            Sliders
+                        </a>
+                    </li>
                     <li class="nav-item nav-category">
-                        <a class="nav-link" data-toggle="collapse" asp-controller="Product" asp-action="Index" aria-expanded="false" aria-controls="ui-basic">
+                        <a class="nav-link" asp-area="AdminArea" asp-controller="Product" asp-action="Index">
                             Products
                         </a>
                     </li>

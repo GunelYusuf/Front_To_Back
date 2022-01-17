@@ -38,6 +38,7 @@
     <None Remove="Areas\Admin\Views\Shared\" />
     <None Remove="Areas\Admin\Views\Dashboard\" />
     <None Remove="Areas\AdminArea\Views\Category\" />
+    <None Remove="Areas\AdminArea\Views\Slider\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -66,6 +67,7 @@
     <Folder Include="Areas\AdminArea\Views\Dashboard\" />
     <Folder Include="wwwroot\Admin\" />
     <Folder Include="Areas\AdminArea\Views\Category\" />
+    <Folder Include="Areas\AdminArea\Views\Slider\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />

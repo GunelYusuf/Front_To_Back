@@ -98,8 +98,5 @@ namespace FronToBack.Areas.AdminArea.Controllers
             return View();
            
         }
-    
-
-     
     }
 }
