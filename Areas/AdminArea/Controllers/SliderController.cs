@@ -37,13 +37,15 @@ namespace FronToBack.Areas.AdminArea.Controllers
 
         public async Task<IActionResult>Create(Slider slider)
         {
-            if (!ModelState.IsValid) return View();
-            //if (ModelState["Photo"].ValidationState == Microsoft.AspNetCore.Mvc.ModelBinding.ModelValidationState.Invalid)
-            //{
-            //    ModelState.AddModelError("Photo", "Don't empty");
-            //}
-
-
+            if (ModelState["Photo"].ValidationState == Microsoft.AspNetCore.Mvc.ModelBinding.ModelValidationState.Invalid)
+            {
+                ModelState.AddModelError("Photo", "Don't empty");
+            }
+            if (!slider.Photo.ContentType.Contains("image/"))
+            {
+                ModelState.AddModelError("Photo", "just image");
+            }
+            bool isImage = slider.Photo.ContentType.Contains("image/");
 
 
 
