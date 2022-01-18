@@ -1,5 +1,45 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model PRODUCTS1
 @{
+    ViewData["Title"] = "Update";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Default form</h4>
+                    <p class="card-description"> Create Product Form </p>
+                    <form class="forms-sample" enctype="multipart/form-data" method="post">
+
+                        <div>
+                            <label>Choose a category:</label>
+                            @Html.DropDownListFor(c => c.CATEGORY1Id, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Name">@Model.Name</label>
+                            <input asp-for="Name" class="form-control" placeholder="Name">
+                            <span class="text-danger" asp-validation-for="Name"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Price">@Model.Price</label>
+                            <input asp-for="Price" class="form-control" placeholder="Price">
+                            <span class="text-danger" asp-validation-for="Price"></span>
+                        </div>
+                        <img src="~/Products-Images/@Model.ImageUrl" />
+                        <div class="form-group">
+                            <label asp-for="ImageProduct"></label>
+                            <input asp-for="ImageProduct" class="form-control" accept="image/*" placeholder="Name">
+                            <span class="text-danger" asp-validation-for="ImageProduct"></span>
+                        </div>
+                        <button class="btn btn-light">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_Validation"></partial>
 }
