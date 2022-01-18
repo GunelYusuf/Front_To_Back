@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FronToBack.Areas.AdminArea.ViewModels;
+using FronToBack.Extensions;
 using FrontToBack.DAL;
 using FrontToBack.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -15,9 +17,11 @@ namespace FronToBack.Areas.AdminArea.Controllers
     public class ProductController : Controller
     {
         private readonly Context _context;
-        public ProductController(Context context)
+        private readonly IWebHostEnvironment _env;
+        public ProductController(Context context, IWebHostEnvironment env)
         {
             _context = context;
+            _env = env;
         }
         public IActionResult Index()
         {
@@ -56,12 +60,32 @@ namespace FronToBack.Areas.AdminArea.Controllers
                 ModelState.AddModelError("Name", "The product with this name already exists");
                 View();
             }
-           PRODUCTS1 newProduct = new PRODUCTS1
+
+            if (ModelState["ImageProduct"].ValidationState == Microsoft.AspNetCore.Mvc.ModelBinding.ModelValidationState.Invalid)
+            {
+                ModelState.AddModelError("ImageProduct", "Don't empty");
+            }
+
+            if (!product.ImageProduct.IsImage())
+            {
+                ModelState.AddModelError("ImageProduct", "just image");
+                return View();
+            }
+            if (product.ImageProduct.IsCorrectSize(300))
+            {
+                ModelState.AddModelError("ImageProduct", "Enter the size correctly");
+                return View();
+            }
+
+
+
+            string fileName = await product.ImageProduct.SaveImageAsync(_env.WebRootPath, "Main-Images");
+            PRODUCTS1 newProduct = new PRODUCTS1
             {
                 CATEGORY1=product.CATEGORY1,
                 Name = product.Name,
                 Price = product.Price,
-                ImageProduct=product.ImageProduct,
+                ImageUrl=fileName,
                 CATEGORY1Id=product.CATEGORY1Id
                
             };

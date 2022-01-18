@@ -7,21 +7,11 @@
                 <div class="card-body">
                     <h4 class="card-title">Default form</h4>
                     <p class="card-description"> Create Product Form </p>
-                    <form class="forms-sample" method="post">
-                        @*<div class="form-group">
-                        <label asp-for="@Model.cATEGORies">Choose a category:</label>
-                          <select name="category" id="model">
-                             <option selected>Select</option>
-                               @foreach (var category in Model.cATEGORies)
-                                 {
-                                  <option value="@category.Name">@category.Name</option>
-                                 }
-                           </select>
-                          <span class="text-danger" asp-validation-for="@Model.cATEGORies"></span>
-                       </div>*@
+                    <form class="forms-sample" method="post" enctype="multipart/form-data">
+                      
                         <div>
                             <label>Choose a category:</label>
-                            @Html.DropDownListFor(c => c.CATEGORY1.Id, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+                            @Html.DropDownListFor(c => c.CATEGORY1Id, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
                         </div>
                         <div class="form-group">
                             <label asp-for="@Model.Name"></label>
@@ -46,7 +36,8 @@
         </div>
     </div>
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="~/JS/script.js"></script>
 @section Scripts{
     <partial name="_Validation"></partial>
 }
