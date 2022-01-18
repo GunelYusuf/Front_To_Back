@@ -138,9 +138,12 @@
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Category/Remove.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Category/Update.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Dashboard/Index.cshtml.g.cs
+/Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Product/Create.cshtml.g.cs
+/Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Product/Index.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Shared/_Validation.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Slider/Create.cshtml.g.cs
+/Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Slider/Delete.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Slider/Index.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/_ViewImports.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/_ViewStart.cshtml.g.cs

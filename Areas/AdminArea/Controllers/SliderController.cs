@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using FronToBack.Extensions;
 using FrontToBack.DAL;
 using FrontToBack.Models;
 using Microsoft.AspNetCore.Hosting;
@@ -45,29 +46,58 @@ namespace FronToBack.Areas.AdminArea.Controllers
             {
                 ModelState.AddModelError("Photo", "Don't empty");
             }
-            if (!slider.Photo.ContentType.Contains("image/"))
+            if (!slider.Photo.IsImage())
             {
                 ModelState.AddModelError("Photo", "just image");
                 return View();
             }
-            if (slider.Photo.Length / 1024 > 100)
+            if (slider.Photo.IsCorrectSize(300))
             {
-                ModelState.AddModelError("Photo", "Size cannot be more than 100");
+                ModelState.AddModelError("Photo", "Enter the size correctly");
                 return View();
             }
 
 
             string root = _env.WebRootPath;
-            string fileName = Guid.NewGuid() + slider.Photo.FileName;
-            string path = Path.Combine(root, "Main-Images", fileName);
-            FileStream fileStream = new FileStream(path,FileMode.Create);
-            await slider.Photo.CopyToAsync(fileStream);
+            
             Slider newSlider = new Slider();
-            newSlider.ImageUrl = fileName;
+            newSlider.ImageUrl = await slider.Photo.SaveImageAsync(_env.WebRootPath, "Main-Images");
+
             await _context.Sliders.AddAsync(newSlider);
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
         }
+
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null) return NotFound();
+            Slider dbslider =await _context.Sliders.FindAsync(id);
+            if (dbslider == null) return NotFound();
+
+            return View(dbslider);
+            
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [ActionName("Delete")]
+
+        public async Task<IActionResult> DeleteSlider(int? id)
+        {
+            if (id == null) return NotFound();
+            Slider dbslider = await _context.Sliders.FindAsync(id);
+            if (dbslider == null) return NotFound();
+
+            string path = Path.Combine(_env.WebRootPath,"Main-Images",dbslider.ImageUrl);
+            if (System.IO.File.Exists(path))
+            {
+                System.IO.File.Delete(path);
+            }
+            _context.Sliders.Remove(dbslider);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }

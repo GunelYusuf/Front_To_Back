@@ -40,6 +40,7 @@
     <None Remove="Areas\AdminArea\Views\Category\" />
     <None Remove="Areas\AdminArea\Views\Slider\" />
     <None Remove="Extensions\" />
+    <None Remove="Areas\AdminArea\Views\Product\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -70,6 +71,7 @@
     <Folder Include="Areas\AdminArea\Views\Category\" />
     <Folder Include="Areas\AdminArea\Views\Slider\" />
     <Folder Include="Extensions\" />
+    <Folder Include="Areas\AdminArea\Views\Product\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />

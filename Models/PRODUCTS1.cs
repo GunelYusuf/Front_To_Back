@@ -1,4 +1,8 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Http;
+
 namespace FrontToBack.Models
 {
     public class PRODUCTS1
@@ -15,6 +19,10 @@ namespace FrontToBack.Models
 
         public virtual CATEGORY1 CATEGORY1 { get; set; }
 
-      
+        [NotMapped]
+        [Required]
+
+        public IFormFile ImageProduct { get; set; }
+
     }
 }

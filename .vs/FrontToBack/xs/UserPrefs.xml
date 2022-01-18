@@ -1,11 +1,13 @@
 ﻿<Properties StartupConfiguration="{8A866B83-CC8F-4F24-8043-6EB8BD17C84F}|FrontToBack">
   <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Areas/AdminArea/Views/Slider/Create.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Areas/AdminArea/Views/Product/Create.cshtml">
     <Files>
-      <File FileName="Areas/AdminArea/Controllers/SliderController.cs" Line="84" Column="22" />
-      <File FileName="Extensions/Extension.cs" Line="27" Column="52" />
-      <File FileName="Areas/AdminArea/Views/Slider/Delete.cshtml" Line="10" Column="52" />
-      <File FileName="Areas/AdminArea/Views/Slider/Create.cshtml" Line="10" Column="20" />
+      <File FileName="Areas/AdminArea/Views/Product/Create.cshtml" Line="40" Column="82" />
+      <File FileName="Areas/AdminArea/ViewModels/HomeVm.cs" Line="16" Column="1" />
+      <File FileName="Areas/AdminArea/Controllers/ProductController.cs" Line="50" Column="8" />
+      <File FileName="Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="Areas/AdminArea/Controllers/CategoryController.cs" Line="1" Column="1" />
+      <File FileName="Areas/AdminArea/Views/Category/Create.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,15 +17,25 @@
               <Node name="Areas" expanded="True">
                 <Node name="AdminArea" expanded="True">
                   <Node name="Controllers" expanded="True" />
+                  <Node name="ViewModels" expanded="True" />
                   <Node name="Views" expanded="True">
-                    <Node name="Slider" expanded="True">
+                    <Node name="Category" expanded="True" />
+                    <Node name="Product" expanded="True">
                       <Node name="Create.cshtml" selected="True" />
                     </Node>
                   </Node>
                 </Node>
               </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Extensions" expanded="True" />
-              <Node name="wwwroot" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="ViewComponents" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Category" expanded="True" />
+                <Node name="Product" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>

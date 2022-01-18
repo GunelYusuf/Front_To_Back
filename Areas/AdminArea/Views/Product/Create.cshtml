@@ -1,0 +1,53 @@
+﻿@model PRODUCTS1
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Default form</h4>
+                    <p class="card-description"> Create Product Form </p>
+                    <form class="forms-sample" method="post">
+                        @*<div class="form-group">
+                        <label asp-for="@Model.cATEGORies">Choose a category:</label>
+                          <select name="category" id="model">
+                             <option selected>Select</option>
+                               @foreach (var category in Model.cATEGORies)
+                                 {
+                                  <option value="@category.Name">@category.Name</option>
+                                 }
+                           </select>
+                          <span class="text-danger" asp-validation-for="@Model.cATEGORies"></span>
+                       </div>*@
+                        <div>
+                            <label>Choose a category:</label>
+                            @Html.DropDownListFor(c => c.CATEGORY1.Id, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.Name"></label>
+                            <input asp-for="@Model.Name" class="form-control" placeholder="Name">
+                            <span class="text-danger" asp-validation-for="@Model.Name"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.Price"></label>
+                            <input asp-for="@Model.Price" class="form-control" placeholder="Price">
+                            <span class="text-danger" asp-validation-for="@Model.Price"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="@Model.ImageProduct"></label>
+                            <input asp-for="@Model.ImageProduct" class="form-control" accept="image/*" placeholder="Image">
+                            <span class="text-danger" asp-validation-for="@Model.ImageProduct"></span>
+                        </div>
+                        <button class="btn btn-light">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_Validation"></partial>
+}
+
