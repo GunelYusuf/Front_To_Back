@@ -140,6 +140,7 @@
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Dashboard/Index.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Product/Create.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Product/Delete.cshtml.g.cs
+/Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Product/Detail.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Product/Index.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Product/Update.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml.g.cs

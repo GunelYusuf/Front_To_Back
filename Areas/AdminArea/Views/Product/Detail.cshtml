@@ -1,0 +1,25 @@
+﻿@model PRODUCTS1
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+
+            <h5>Name: @Model.Name</h5>
+            <p>Price: @Model.Price</p>
+
+            <div>
+                <img src="~/Products-Images/@Model.ImageUrl" />
+            </div>
+
+        </div>
+        
+           
+        
+        <div class="col-6">
+            <a asp-controller="Product" asp-action="Index" class="btn btn-warning" style="color:white">Go Back</a>
+        </div>
+    </div>
+</div>

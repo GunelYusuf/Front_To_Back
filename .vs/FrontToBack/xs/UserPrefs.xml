@@ -1,13 +1,13 @@
 ﻿<Properties StartupConfiguration="{8A866B83-CC8F-4F24-8043-6EB8BD17C84F}|FrontToBack">
   <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Areas/AdminArea/Views/Category/Detail.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Areas/AdminArea/Views/Product/Index.cshtml">
     <Files>
-      <File FileName="Areas/AdminArea/Controllers/ProductController.cs" Line="195" Column="49" />
-      <File FileName="Areas/AdminArea/Controllers/SliderController.cs" Line="100" Column="10" />
-      <File FileName="Areas/AdminArea/Views/Product/Update.cshtml" Line="29" Column="52" />
-      <File FileName="Areas/AdminArea/Views/Product/Delete.cshtml" Line="1" Column="1" />
-      <File FileName="Areas/AdminArea/Views/Product/Index.cshtml" Line="35" Column="59" />
+      <File FileName="Areas/AdminArea/Controllers/ProductController.cs" Line="140" Column="29" />
+      <File FileName="Areas/AdminArea/Views/Product/Detail.cshtml" Line="11" Column="23" />
       <File FileName="Areas/AdminArea/Views/Category/Detail.cshtml" Line="1" Column="1" />
+      <File FileName="Areas/AdminArea/Views/Category/Update.cshtml" Line="1" Column="1" />
+      <File FileName="Areas/AdminArea/Views/Product/Delete.cshtml" Line="1" Column="1" />
+      <File FileName="Areas/AdminArea/Views/Product/Index.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,10 +18,9 @@
                 <Node name="AdminArea" expanded="True">
                   <Node name="Controllers" expanded="True" />
                   <Node name="Views" expanded="True">
-                    <Node name="Category" expanded="True">
-                      <Node name="Detail.cshtml" selected="True" />
+                    <Node name="Product" expanded="True">
+                      <Node name="Index.cshtml" selected="True" />
                     </Node>
-                    <Node name="Product" expanded="True" />
                     <Node name="Shared" expanded="True" />
                     <Node name="Slider" expanded="True" />
                   </Node>

@@ -47,7 +47,7 @@ namespace FronToBack.Areas.AdminArea.Controllers
                                                     Text = i.Name,
                                                     Value = i.Id.ToString()
                                                 }).ToList();
-            ViewBag.dgr = categories;
+            ViewBag.category = categories;
             return View();
         }
        
@@ -137,7 +137,7 @@ namespace FronToBack.Areas.AdminArea.Controllers
                                                    Text = i.Name,
                                                    Value = i.Id.ToString()
                                                }).ToList();
-            ViewBag.dgr = categories;
+            ViewBag.category = categories;
             return View(dbProduct);
         }
 
