@@ -1,5 +1,20 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model PRODUCTS1
+
 @{
+    ViewData["Title"] = "Delete";
 }
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <img src="~/Products-Images/@Model.ImageUrl" />
+        </div>
+
+        <div class="col-6">
+            <a asp-controller="Product" asp-action="Index" class="btn btn-warning" style="color:white">Go Back</a>
+        </div>
+        <form class="forms-sample mt-3" method="Post">
+            <button class="btn btn-danger">Delete</button>
+        </form>
+    </div>
+</div>

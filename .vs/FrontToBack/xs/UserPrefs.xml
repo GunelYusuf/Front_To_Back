@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{8A866B83-CC8F-4F24-8043-6EB8BD17C84F}|FrontToBack">
   <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Areas/AdminArea/Views/Product/Delete.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Areas/AdminArea/Views/Product/Update.cshtml">
     <Files>
       <File FileName="Areas/AdminArea/Controllers/ProductController.cs" Line="123" Column="32" />
       <File FileName="Areas/AdminArea/Controllers/SliderController.cs" Line="100" Column="10" />
-      <File FileName="Areas/AdminArea/Views/Product/Create.cshtml" Line="10" Column="91" />
-      <File FileName="Areas/AdminArea/Views/Product/Delete.cshtml" Line="1" Column="1" />
+      <File FileName="Areas/AdminArea/Views/Slider/Index.cshtml" Line="8" Column="106" />
+      <File FileName="Areas/AdminArea/Views/Product/Update.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,7 +17,7 @@
                   <Node name="Controllers" expanded="True" />
                   <Node name="Views" expanded="True">
                     <Node name="Product" expanded="True">
-                      <Node name="Delete.cshtml" selected="True" />
+                      <Node name="Update.cshtml" selected="True" />
                     </Node>
                     <Node name="Shared" expanded="True" />
                     <Node name="Slider" expanded="True" />
