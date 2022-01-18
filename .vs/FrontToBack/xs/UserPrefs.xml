@@ -2,14 +2,10 @@
   <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Areas/AdminArea/Views/Slider/Create.cshtml">
     <Files>
-      <File FileName="Areas/AdminArea/Controllers/SliderController.cs" Line="93" Column="32" />
-      <File FileName="Areas/AdminArea/Controllers/CategoryController.cs" Line="1" Column="1" />
-      <File FileName="Extensions/Extension.cs" Line="20" Column="62" />
-      <File FileName="Areas/AdminArea/Views/Slider/Index.cshtml" Line="4" Column="23" />
-      <File FileName="Areas/AdminArea/Views/Shared/_AdminLayout.cshtml" Line="165" Column="44" />
-      <File FileName="Models/Slider.cs" Line="15" Column="8" />
-      <File FileName="Areas/AdminArea/Views/Slider/Create.cshtml" Line="10" Column="64" />
-      <File FileName="Areas/AdminArea/Views/Slider/Delete.cshtml" Line="1" Column="1" />
+      <File FileName="Areas/AdminArea/Controllers/SliderController.cs" Line="84" Column="22" />
+      <File FileName="Extensions/Extension.cs" Line="27" Column="52" />
+      <File FileName="Areas/AdminArea/Views/Slider/Delete.cshtml" Line="10" Column="52" />
+      <File FileName="Areas/AdminArea/Views/Slider/Create.cshtml" Line="10" Column="20" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
