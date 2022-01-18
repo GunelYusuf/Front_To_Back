@@ -1,14 +1,15 @@
 ﻿<Properties StartupConfiguration="{8A866B83-CC8F-4F24-8043-6EB8BD17C84F}|FrontToBack">
   <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Extensions/Extension.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Areas/AdminArea/Views/Slider/Create.cshtml">
     <Files>
-      <File FileName="Areas/AdminArea/Controllers/SliderController.cs" Line="70" Column="12" />
+      <File FileName="Areas/AdminArea/Controllers/SliderController.cs" Line="93" Column="32" />
+      <File FileName="Areas/AdminArea/Controllers/CategoryController.cs" Line="1" Column="1" />
+      <File FileName="Extensions/Extension.cs" Line="20" Column="62" />
       <File FileName="Areas/AdminArea/Views/Slider/Index.cshtml" Line="4" Column="23" />
       <File FileName="Areas/AdminArea/Views/Shared/_AdminLayout.cshtml" Line="165" Column="44" />
       <File FileName="Models/Slider.cs" Line="15" Column="8" />
       <File FileName="Areas/AdminArea/Views/Slider/Create.cshtml" Line="10" Column="64" />
-      <File FileName="Startup.cs" Line="39" Column="55" />
-      <File FileName="Extensions/Extension.cs" Line="4" Column="12" />
+      <File FileName="Areas/AdminArea/Views/Slider/Delete.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,12 +18,15 @@
             <Node name="FronToBack" expanded="True">
               <Node name="Areas" expanded="True">
                 <Node name="AdminArea" expanded="True">
-                  <Node name="Views" expanded="True" />
+                  <Node name="Controllers" expanded="True" />
+                  <Node name="Views" expanded="True">
+                    <Node name="Slider" expanded="True">
+                      <Node name="Create.cshtml" selected="True" />
+                    </Node>
+                  </Node>
                 </Node>
               </Node>
-              <Node name="Extensions" expanded="True">
-                <Node name="Extension.cs" selected="True" />
-              </Node>
+              <Node name="Extensions" expanded="True" />
               <Node name="wwwroot" expanded="True" />
             </Node>
           </Node>
