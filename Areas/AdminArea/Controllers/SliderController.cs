@@ -99,5 +99,49 @@ namespace FronToBack.Areas.AdminArea.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        public async Task<IActionResult> Update(int? id)
+        {
+            if (id == null) return NotFound();
+            Slider dbSlider = await _context.Sliders.FindAsync(id);
+            if (dbSlider == null) return NotFound();
+            return View(dbSlider);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Update(int? id, Slider slider)
+        {
+            if (id == null) return NotFound();
+
+            if (slider.Photo != null)
+            {
+                if (ModelState["Photo"].ValidationState == Microsoft.AspNetCore.Mvc.ModelBinding.ModelValidationState.Invalid)
+                {
+                    ModelState.AddModelError("Photo", "Don't empty");
+                }
+
+                if (!slider.Photo.IsImage())
+                {
+                    ModelState.AddModelError("Photo", "just image");
+                    return View();
+                }
+                if (slider.Photo.IsCorrectSize(400))
+                {
+                    ModelState.AddModelError("Photo", "Enter the size correctly");
+                    return View();
+                }
+                Slider dbSlider = await _context.Sliders.FindAsync(id);
+                string path = Path.Combine(_env.WebRootPath, "Main-Images", dbSlider.ImageUrl);
+                if (System.IO.File.Exists(path))
+                {
+                    System.IO.File.Delete(path);
+                }
+                string fileName = await slider.Photo.SaveImageAsync(_env.WebRootPath, "Main-Images");
+                dbSlider.ImageUrl = fileName;
+                await _context.SaveChangesAsync();
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
+
     }
 }

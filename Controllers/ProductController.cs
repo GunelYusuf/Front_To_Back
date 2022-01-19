@@ -20,8 +20,8 @@ namespace FrontToBack.Controllers
         {
             //ViewBag.ProductCount = _context.pRODUCTS1s.Count();
             List<PRODUCTS1> pRODUCTS1s = _context.pRODUCTS1s.Include(g => g.CATEGORY1).Take(5).ToList();
-            return PartialView("_ProductPartial",pRODUCTS1s);
-         
+            return PartialView("_ProductPartial", pRODUCTS1s);
+
         }
         //public IActionResult LoadMore()
         //{
@@ -38,7 +38,7 @@ namespace FrontToBack.Controllers
 
         public IActionResult LoadMore(int skip)
         {
-            IEnumerable<PRODUCTS1> pRODUCTS1s = _context.pRODUCTS1s.Include(c=>c.CATEGORY1).Skip(skip).Take(8).ToList();
+            IEnumerable<PRODUCTS1> pRODUCTS1s = _context.pRODUCTS1s.Include(c => c.CATEGORY1).Skip(skip).Take(8).ToList();
             return Json(_context.pRODUCTS1s.Skip(skip).Take(5).ToList());
         }
 
@@ -55,7 +55,7 @@ namespace FrontToBack.Controllers
 
         public IActionResult Detail(int id)
         {
-            PRODUCTS1 pRODUCTS1 = _context.pRODUCTS1s.Include(c=>c.CATEGORY1).FirstOrDefault(p=>p.Id==id);
+            PRODUCTS1 pRODUCTS1 = _context.pRODUCTS1s.Include(c => c.CATEGORY1).FirstOrDefault(p => p.Id == id);
             return View(pRODUCTS1);
 
         }

@@ -3,13 +3,15 @@
 <main>
     <section id="bigSlider" style="width: 100%; height: 474px;">
         <div class="title">
-            <h2> @Html.Raw(Model.SliderTitles.Title) </h2>
+            <h2> @Html.Raw(Model.SliderTitles.Title)</h2>
             <p>
                 @Model.SliderTitles.Description
             </p>
             <img src="~/Main-Images/@Model.SliderTitles.ImageUrl" alt="">
         </div>
     </section>
+
+
     <section id="products-card">
         <div class="container p-0">
             <div class="row w-100 m-0 p-0">
@@ -18,12 +20,12 @@
                         <h6>Categories <i class="fas fa-caret-down"></i></h6>
                         <ul>
                             <li data-id="1"><a class="selected" style="color:#f34f3f">All</a></li>
-                          
+
                             @foreach (var item in Model.cATEGORies)
-                             {
-                                 <li data-id="@item.DataId"><a>@item.Name</a></li>
-                             }
-                         </ul>
+                            {
+                                <li data-id="@item.DataId"><a>@item.Name</a></li>
+                            }
+                        </ul>
                     </div>
                     <div class="filter">
                         <span>Filter</span>
@@ -108,6 +110,8 @@
             }
         </div>
     </section>
+
+
     <section id="video">
         <div class="container">
             <div class="row">
@@ -156,9 +160,8 @@
             </div>
             <div class="experts">
                 <div class="row">
-
                     @foreach (var item in Model.FlowerExperts)
-                    {
+                     {
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="expert text-center">
                                 <div class="img">
@@ -170,9 +173,7 @@
                                 </div>
                             </div>
                         </div>
-                    }
-
-
+                     }
                 </div>
             </div>
         </div>

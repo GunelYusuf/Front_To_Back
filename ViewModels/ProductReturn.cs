@@ -1,4 +1,6 @@
 ﻿using System;
+using FrontToBack.Models;
+
 namespace FrontToBack.ViewModels
 {
     public class ProductReturn
@@ -13,5 +15,6 @@ namespace FrontToBack.ViewModels
         public double Price { get; set; }
 
         public string CATEGORY1 { get; set; }
+
     }
 }
