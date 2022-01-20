@@ -8526,7 +8526,7 @@
       "outputPath": "/Users/gunelyusubova/Desktop/FrontToBack/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/gunelyusubova/.nuget/NuGet/NuGet.Config"
+        "/Users/gunelyusubova/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -8601,7 +8601,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.101/RuntimeIdentifierGraph.json"
       }
     }
   }
