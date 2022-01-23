@@ -1,9 +1,11 @@
-﻿using FrontToBack.Models;
+﻿using FronToBack.Models;
+using FrontToBack.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace FrontToBack.DAL
 {
-    public class Context:DbContext
+    public class Context:IdentityDbContext<AppUser>
     {
         public Context(DbContextOptions<Context> options) : base(options)
         {
