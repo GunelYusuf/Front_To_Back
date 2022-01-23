@@ -7,6 +7,7 @@
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/FronToBack.Views.dll
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/FronToBack.Views.pdb
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/Json.Net.dll
+/Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Razor.Language.dll
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/Microsoft.Bcl.HashCode.dll
@@ -127,8 +128,6 @@
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.RazorAssemblyInfo.cache
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.RazorAssemblyInfo.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/staticwebassets/FronToBack.StaticWebAssets.Manifest.cache
-/Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/staticwebassets/FronToBack.StaticWebAssets.xml
-/Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/scopedcss/bundle/FronToBack.styles.css
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.TagHelpers.input.cache
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.TagHelpers.output.cache
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.RazorCoreGenerate.cache
@@ -172,3 +171,5 @@
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.dll
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.pdb
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.genruntimeconfig.cache
+/Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/FronToBack
+/Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.csproj.AssemblyReference.cache

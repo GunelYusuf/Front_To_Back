@@ -24,6 +24,7 @@ namespace FrontToBack
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            
             services.AddIdentity<AppUser, IdentityRole>(opt =>
              {
                  opt.Password.RequireLowercase = true;
@@ -36,7 +37,7 @@ namespace FrontToBack
                  opt.Lockout.MaxFailedAccessAttempts = 5;
                  opt.Lockout.AllowedForNewUsers = true;
 
-             });
+             }).AddEntityFrameworkStores<Context>().AddDefaultTokenProviders();
             
             services.AddControllersWithViews();
             services.AddDbContext<Context>(opt =>

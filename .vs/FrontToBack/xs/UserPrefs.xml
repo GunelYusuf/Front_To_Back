@@ -1,6 +1,13 @@
 ﻿<Properties StartupConfiguration="{8A866B83-CC8F-4F24-8043-6EB8BD17C84F}|FrontToBack">
   <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="ViewModels/RegisterVM.cs">
+    <Files>
+      <File FileName="Models/AppUser.cs" Line="12" Column="1" />
+      <File FileName="Controllers/AccountController.cs" Line="16" Column="54" />
+      <File FileName="Views/Account/Register.cshtml" Line="19" Column="44" />
+      <File FileName="ViewModels/RegisterVM.cs" Line="6" Column="8" />
+      <File FileName="ViewModels/HomeVM.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -9,17 +16,14 @@
               <Node name="Areas" expanded="True">
                 <Node name="AdminArea" expanded="True" />
               </Node>
-              <Node name="DAL" expanded="True" />
-              <Node name="Extensions" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="AppUser.cs" selected="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="RegisterVM.cs" selected="True" />
               </Node>
-              <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" />
-              </Node>
+              <Node name="Views" expanded="True" />
               <Node name="wwwroot" expanded="True">
-                <Node name="expert img" expanded="True" />
-                <Node name="JS" expanded="True" />
+                <Node name="Admin" expanded="True" />
               </Node>
             </Node>
           </Node>
