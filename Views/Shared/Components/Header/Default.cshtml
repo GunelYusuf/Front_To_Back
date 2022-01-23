@@ -370,64 +370,19 @@
                                 </ul>
                             </div>
                         </li>
+
+                        <li class="elements"> @ViewBag.UserName</li>
                         <li class="elements">
-                            <a href="#">Elements</a>
-                            <div class="sub_elements">
-                                <ul>
-                                    <li class="classic">
-                                        <i class="fas fa-chevron-left"></i><a href="#">Classic</a>
-                                        <div class="sub_classic">
-                                            <ul>
-                                                <li><a href="/accordions.html" target="_blank">Accordions</a></li>
-                                                <li><a href="/tabs.html" target="_blank">Tabs</a></li>
-                                                <li><a href="#">Buttons</a></li>
-                                                <li><a href="#">Video Buttons</a></li>
-                                                <li><a href="#">Contact Form</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="infographic">
-                                        <i class="fas fa-chevron-left"></i><a href="#">Infographic</a>
-                                        <div class="sub_infographic">
-                                            <ul>
-                                                <li><a href="#">Blog Lists</a></li>
-                                                <li><a href="#">Counters</a></li>
-                                                <li><a href="#">Countdown</a></li>
-                                                <li><a href="/progressbar.html" target="_blank">Progress Bar</a></li>
-                                                <li><a href="#">Pie Charts</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="interactive">
-                                        <i class="fas fa-chevron-left"></i><a href="#">Interactive</a>
-                                        <div class="sub_interactive">
-                                            <ul>
-                                                <li><a href="#">Image Gallery</a></li>
-                                                <li><a href="#">Testimonials</a></li>
-                                                <li><a href="#">Team</a></li>
-                                                <li><a href="#">Banner</a></li>
-                                                <li><a href="/shop-list.html" target="_blank">Shop List</a></li>
-                                                <li><a href="#">Portfolio List</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="typography">
-                                        <i class="fas fa-chevron-left"></i><a href="#">Typography</a>
-                                        <div class="sub_typography">
-                                            <ul>
-                                                <li><a href="#">Headings</a></li>
-                                                <li><a href="">Columns</a></li>
-                                                <li><a href="">Section Title</a></li>
-                                                <li><a href="">Blockquote</a></li>
-                                                <li><a href="">Dropcaps</a></li>
-                                                <li><a href="">Highlights</a></li>
-                                                <li><a href="">Separators</a></li>
-                                                <li><a href="">Custom Font</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <a asp-controller="Account" asp-action="LogOut">Log Out</a>
+                            }
+                            else
+                            {
+                                <a asp-controller="Account" asp-action="LogIn">Log In</a>
+                            }
+
+
                         </li>
                     </ul>
                 </nav>

@@ -59,6 +59,17 @@ namespace FronToBack.Controllers
             return Content(User.Identity.IsAuthenticated.ToString());
         }
 
+        public IActionResult LogIn()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> LogOut()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
+
         public IActionResult Index()
         {
             return View();
