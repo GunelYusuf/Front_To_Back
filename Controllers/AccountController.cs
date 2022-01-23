@@ -14,10 +14,12 @@ namespace FronToBack.Controllers
     public class AccountController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
+        private readonly SignInManager<AppUser> _signInManager;
 
-        public AccountController(UserManager<AppUser> userManager)
+        public AccountController(UserManager<AppUser> userManager,SignInManager<AppUser> signInManager)
         {
             _userManager = userManager;
+            _signInManager = signInManager;
         }
         public IActionResult Register()
         {
@@ -46,9 +48,16 @@ namespace FronToBack.Controllers
                 }
                 return View();
             }
+
+            await _signInManager.SignInAsync(user, true);
+
             return RedirectToAction("Index", "Home");
         }
 
+        public IActionResult CheckSignIn()
+        {
+            return Content(User.Identity.IsAuthenticated.ToString());
+        }
 
         public IActionResult Index()
         {

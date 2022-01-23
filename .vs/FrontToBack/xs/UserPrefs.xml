@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{8A866B83-CC8F-4F24-8043-6EB8BD17C84F}|FrontToBack">
   <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Account/Register.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/AccountController.cs">
     <Files>
-      <File FileName="Controllers/AccountController.cs" Line="14" Column="40" />
-      <File FileName="Views/Account/Register.cshtml" Line="31" Column="50" />
+      <File FileName="Controllers/AccountController.cs" Line="50" Column="38" />
+      <File FileName="Views/Account/Register.cshtml" Line="66" Column="33" />
       <File FileName="ViewModels/RegisterVM.cs" Line="4" Column="33" />
     </Files>
     <Pads>
@@ -11,14 +11,12 @@
         <State name="__root__">
           <Node name="FrontToBack" expanded="True">
             <Node name="FronToBack" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Migrations" expanded="True" />
-              <Node name="Models" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="AccountController.cs" selected="True" />
+              </Node>
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Account" expanded="True">
-                  <Node name="Register.cshtml" selected="True" />
-                </Node>
+                <Node name="Account" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True" />
             </Node>
