@@ -32,7 +32,8 @@
                             </div>
                             <h4>New here?</h4>
                             <h6 class="font-weight-light">Signing up is easy. It only takes a few steps</h6>
-                            <form class="pt-3">
+                            <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+                            <form class="pt-3"  method="post">
                                 <div class="form-group">
                                     <input asp-for="FullName" class="form-control form-control-lg" placeholder="FullName">
                                     <span asp-validation-for="FullName" class="text text-danger"></span>
@@ -54,14 +55,14 @@
                                     <span asp-validation-for="ConfirmPassword" class="text text-danger"></span>
                                 </div>
                                 @*<div class="mb-4">
-                                    <div class="form-check">
-                                        <label class="form-check-label text-muted">
-                                            <input type="checkbox" class="form-check-input"> I agree to all Terms & Conditions
-                                        </label>
-                                    </div>
-                                </div>*@
+                                        <div class="form-check">
+                                            <label class="form-check-label text-muted">
+                                                <input type="checkbox" class="form-check-input"> I agree to all Terms & Conditions
+                                            </label>
+                                        </div>
+                                    </div>*@
                                 <div class="mt-3">
-                                    <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="../../index.html">SIGN UP</a>
+                                    <button  class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit">SIGN UP</button>
                                 </div>
                                 <div class="text-center mt-4 font-weight-light">
                                     Already have an account? <a asp-controller="Account" asp-action="Login" class="text-primary">Login</a>
@@ -80,7 +81,10 @@
     <script src="../../vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
-    <!-- End plugin js for this page -->
+    <!-- End plugin js for
+      <scrip src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"> </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+    this page -->
     <!-- inject:js -->
     <script src="../../js/off-canvas.js"></script>
     <script src="../../js/misc.js"></script>
