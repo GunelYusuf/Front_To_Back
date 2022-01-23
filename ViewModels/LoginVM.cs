@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace FronToBack.ViewModels
+namespace FrontToBack.ViewModels
 {
     public class LoginVM
     {

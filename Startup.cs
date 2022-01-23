@@ -34,8 +34,8 @@ namespace FrontToBack
                  opt.User.RequireUniqueEmail = true;
 
                  opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30);
-                 opt.Lockout.MaxFailedAccessAttempts = 5;
-                 opt.Lockout.AllowedForNewUsers = true;
+                 opt.Lockout.MaxFailedAccessAttempts = 3;
+                 //opt.Lockout.AllowedForNewUsers = true;
 
              }).AddEntityFrameworkStores<Context>().AddDefaultTokenProviders();
             

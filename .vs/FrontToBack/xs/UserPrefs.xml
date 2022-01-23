@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{8A866B83-CC8F-4F24-8043-6EB8BD17C84F}|FrontToBack">
   <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Account/LogIn.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Startup.cs">
     <Files>
-      <File FileName="Controllers/AccountController.cs" Line="64" Column="27" />
-      <File FileName="Views/Account/Register.cshtml" Line="3" Column="1" />
-      <File FileName="Views/Account/LogIn.cshtml" Line="38" Column="64" />
+      <File FileName="Controllers/AccountController.cs" Line="90" Column="57" />
+      <File FileName="Views/Account/LogIn.cshtml" Line="34" Column="59" />
       <File FileName="ViewModels/LoginVM.cs" Line="4" Column="33" />
       <File FileName="ViewModels/RegisterVM.cs" Line="4" Column="11" />
+      <File FileName="Startup.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,15 +17,14 @@
               <Node name="ViewComponents" expanded="True" />
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Account" expanded="True">
-                  <Node name="LogIn.cshtml" selected="True" />
-                </Node>
+                <Node name="Account" expanded="True" />
                 <Node name="Shared" expanded="True">
                   <Node name="Components" expanded="True">
                     <Node name="Header" expanded="True" />
                   </Node>
                 </Node>
               </Node>
+              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>

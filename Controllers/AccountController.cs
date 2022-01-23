@@ -64,6 +64,37 @@ namespace FronToBack.Controllers
             return View();
         }
 
+        [HttpPost]
+        [AutoValidateAntiforgeryToken]
+
+        public async Task<IActionResult> LogIn(LoginVM login)
+        {
+            if (!ModelState.IsValid) return View();
+            AppUser dbUser = await _userManager.FindByNameAsync(login.UserName);
+
+            if (dbUser == null)
+            {
+                ModelState.AddModelError("", "UserName or Password wrong");
+                return View();
+            }
+
+            var signInResult = await _signInManager.PasswordSignInAsync(dbUser, login.Password, true, true);
+            if (signInResult.IsLockedOut)
+            {
+
+                ModelState.AddModelError("", "is LockOut");
+                return View();
+            }
+            if (!signInResult.Succeeded)
+            {
+                ModelState.AddModelError("", "UserName or Password wrong");
+                return View();
+            }
+           
+
+            return RedirectToAction("Index", "Home");
+        }
+
         public async Task<IActionResult> LogOut()
         {
             await _signInManager.SignOutAsync();
