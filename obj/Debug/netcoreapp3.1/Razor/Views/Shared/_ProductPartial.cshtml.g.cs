@@ -14,20 +14,20 @@ namespace FrontToBack.Views.Shared
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 2 "/Users/gunelyusubova/Desktop/FrontToBack/Views/_ViewImports.cshtml"
-using FrontToBack.Models;
+using FrontToBack.ViewModels;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 3 "/Users/gunelyusubova/Desktop/FrontToBack/Views/_ViewImports.cshtml"
-using FrontToBack.ViewModels;
+using FrontToBack.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e744b544bf058ad8f13ed6161321a8458ae1e535", @"/Views/Shared/_ProductPartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d9a7ae2cb9cc7b3d5ec6630098c4f646b54e1471", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b0361fc375e18ec8ad721aa6403cabccbafde0f3", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__ProductPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<PRODUCTS1>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("alt", new global::Microsoft.AspNetCore.Html.HtmlString(""), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

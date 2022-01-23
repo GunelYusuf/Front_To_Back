@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FrontToBack.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20220123104235_addIdentity")]
-    partial class addIdentity
+    [Migration("20220123120420_IdentityAdd")]
+    partial class IdentityAdd
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
