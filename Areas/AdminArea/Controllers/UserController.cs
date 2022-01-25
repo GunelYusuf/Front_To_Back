@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
+using FrontToBack.Areas.AdminArea.ViewModels;
 using FrontToBack.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -38,6 +39,16 @@ namespace FronToBack.Areas.AdminArea.Controllers
             //    userVMs.Add(userVM);
             //}
             return View(users);
+        }
+
+        public async Task<IActionResult> Detail(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            UserRoleVM userRoleVM = new UserRoleVM();
+            userRoleVM.AppUser = user;
+            //userRoleVM.Roles= _roleManager.Roles.ToList();
+            userRoleVM.Roles = await _userManager.GetRolesAsync(user);
+            return View(userRoleVM);
         }
     }
 }
