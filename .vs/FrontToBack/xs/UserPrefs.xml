@@ -1,19 +1,17 @@
 ﻿<Properties StartupConfiguration="{8A866B83-CC8F-4F24-8043-6EB8BD17C84F}|FrontToBack">
   <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/AccountController.cs">
     <Files>
-      <File FileName="Controllers/AccountController.cs" Line="90" Column="57" />
-      <File FileName="Views/Account/LogIn.cshtml" Line="34" Column="59" />
-      <File FileName="ViewModels/LoginVM.cs" Line="4" Column="33" />
-      <File FileName="ViewModels/RegisterVM.cs" Line="4" Column="11" />
-      <File FileName="Startup.cs" Line="1" Column="1" />
+      <File FileName="Controllers/AccountController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FrontToBack" expanded="True">
             <Node name="FronToBack" expanded="True">
-              <Node name="Controllers" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="AccountController.cs" selected="True" />
+              </Node>
               <Node name="ViewComponents" expanded="True" />
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
@@ -24,7 +22,6 @@
                   </Node>
                 </Node>
               </Node>
-              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>

@@ -15,11 +15,13 @@ namespace FronToBack.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
-        public AccountController(UserManager<AppUser> userManager,SignInManager<AppUser> signInManager)
+        public AccountController(UserManager<AppUser> userManager,SignInManager<AppUser> signInManager,RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
         }
         public IActionResult Register()
         {
@@ -104,6 +106,19 @@ namespace FronToBack.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+
+        public async Task Create()
+        {
+            if (!await _roleManager.RoleExistsAsync("Admin"))
+            {
+                await _roleManager.CreateAsync(new IdentityRole { Name = "Admin" });
+            }
+            if (! await _roleManager.RoleExistsAsync("Member"))
+            {
+                await _roleManager.CreateAsync(new IdentityRole { Name = "Member" });
+            }
         }
     }
 }
