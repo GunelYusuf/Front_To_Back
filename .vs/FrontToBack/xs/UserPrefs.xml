@@ -1,12 +1,14 @@
 ﻿<Properties StartupConfiguration="{8A866B83-CC8F-4F24-8043-6EB8BD17C84F}|FrontToBack">
   <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Areas/AdminArea/Controllers/UserController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Account/Register.cshtml">
     <Files>
-      <File FileName="Areas/AdminArea/Controllers/UserController.cs" Line="73" Column="36" />
+      <File FileName="Areas/AdminArea/Controllers/UserController.cs" Line="86" Column="68" />
       <File FileName="Areas/AdminArea/ViewModels/UserVM.cs" Line="11" Column="7" />
       <File FileName="ViewModels/RegisterVM.cs" Line="8" Column="9" />
       <File FileName="Areas/AdminArea/ViewModels/CreateUserVM.cs" Line="32" Column="41" />
       <File FileName="Controllers/AccountController.cs" Line="1" Column="1" />
+      <File FileName="Areas/AdminArea/Views/User/Create.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Account/Register.cshtml" Line="94" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,9 +17,7 @@
             <Node name="FronToBack" expanded="True">
               <Node name="Areas" expanded="True">
                 <Node name="AdminArea" expanded="True">
-                  <Node name="Controllers" expanded="True">
-                    <Node name="UserController.cs" selected="True" />
-                  </Node>
+                  <Node name="Controllers" expanded="True" />
                   <Node name="ViewModels" expanded="True" />
                   <Node name="Views" expanded="True">
                     <Node name="User" expanded="True" />
@@ -30,7 +30,9 @@
               <Node name="ViewComponents" expanded="True" />
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Account" expanded="True" />
+                <Node name="Account" expanded="True">
+                  <Node name="Register.cshtml" selected="True" />
+                </Node>
                 <Node name="Shared" expanded="True">
                   <Node name="Components" expanded="True">
                     <Node name="Header" expanded="True" />

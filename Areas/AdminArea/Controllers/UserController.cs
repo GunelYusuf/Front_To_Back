@@ -1,7 +1,10 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
+using FronToBack.Areas.AdminArea.ViewModels;
 using FrontToBack.Areas.AdminArea.ViewModels;
 using FrontToBack.Models;
+using FrontToBack.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -50,5 +53,42 @@ namespace FronToBack.Areas.AdminArea.Controllers
             userRoleVM.Roles = await _userManager.GetRolesAsync(user);
             return View(userRoleVM);
         }
+
+        public IActionResult CreateUser()
+        {
+
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public async Task<IActionResult> CreateUser(CreateUserVM user)
+        {
+            if (!ModelState.IsValid) return View();
+            AppUser appUser = new AppUser
+            {
+                FullName = user.FullName,
+                UserName = user.UserName,
+                Email = user.Email,
+
+            };
+            IdentityResult identityResult = await _userManager.CreateAsync(appUser, user.Password);
+            if (!identityResult.Succeeded)
+            {
+                foreach (var error in identityResult.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+                return View();
+            }
+
+            await _userManager.AddToRoleAsync(appUser, $"{user.Role}");
+            await _signInManager.SignInAsync(appUser, true);
+
+            return RedirectToAction("Index", "Home");
+        }
+
+
     }
 }
