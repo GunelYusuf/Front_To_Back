@@ -51,6 +51,7 @@ namespace FronToBack.Controllers
                 return View();
             }
 
+            await _userManager.AddToRoleAsync(user, "Member");
             await _signInManager.SignInAsync(user, true);
 
             return RedirectToAction("Index", "Home");
@@ -92,6 +93,14 @@ namespace FronToBack.Controllers
                 ModelState.AddModelError("", "UserName or Password wrong");
                 return View();
             }
+
+            var roles = await _userManager.GetRolesAsync(dbUser);
+
+            if (roles[0]=="Admin")
+            {
+                return RedirectToAction("Index", "Dashboard", new { area = "AdminArea" });
+            }
+
            
 
             return RedirectToAction("Index", "Home");
@@ -109,13 +118,13 @@ namespace FronToBack.Controllers
         }
 
 
-        public async Task Create()
+        public async Task CreateRole()
         {
             if (!await _roleManager.RoleExistsAsync("Admin"))
             {
                 await _roleManager.CreateAsync(new IdentityRole { Name = "Admin" });
             }
-            if (! await _roleManager.RoleExistsAsync("Member"))
+            if (!await _roleManager.RoleExistsAsync("Member"))
             {
                 await _roleManager.CreateAsync(new IdentityRole { Name = "Member" });
             }
