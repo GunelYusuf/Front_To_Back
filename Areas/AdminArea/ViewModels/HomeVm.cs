@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using FrontToBack.Models;
 
-namespace FronToBack.Areas.AdminArea.ViewModels
+namespace FrontToBack.Areas.AdminArea.ViewModels
 {
     public class HomeVm
     {

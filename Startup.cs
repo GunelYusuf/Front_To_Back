@@ -1,5 +1,5 @@
 ﻿using System;
-using FronToBack.Models;
+using FrontToBack.Models;
 using FrontToBack.DAL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

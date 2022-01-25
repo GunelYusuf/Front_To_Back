@@ -1,8 +1,7 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
 
-namespace FronToBack.Models
+namespace FrontToBack.Models
 {
     public class AppUser:IdentityUser
     {

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using FronToBack.Areas.AdminArea.ViewModels;
-using FronToBack.Extensions;
+using FrontToBack.Areas.AdminArea.ViewModels;
+using FrontToBack.Extensions;
 using FrontToBack.DAL;
 using FrontToBack.Models;
 using Microsoft.AspNetCore.Hosting;
@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
-namespace FronToBack.Areas.AdminArea.Controllers
+namespace FrontToBack.Areas.AdminArea.Controllers
 {
     [Area("AdminArea")]
     public class ProductController : Controller

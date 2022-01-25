@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FronToBack.Areas.AdminArea.Controllers
+namespace FrontToBack.Areas.AdminArea.Controllers
 {
     public class DashboardController : Controller
     {

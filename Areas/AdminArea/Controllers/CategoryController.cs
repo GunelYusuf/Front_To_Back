@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace FronToBack.Areas.AdminArea.Controllers
+namespace FrontToBack.Areas.AdminArea.Controllers
 {
     [Area("AdminArea")]
     public class CategoryController : Controller

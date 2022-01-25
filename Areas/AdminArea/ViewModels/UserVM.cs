@@ -1,5 +1,4 @@
-﻿using System;
-namespace FronToBack.Areas.AdminArea.ViewModels
+﻿namespace FrontToBack.Areas.AdminArea.ViewModels
 {
     public class UserVM
     {
@@ -8,5 +7,7 @@ namespace FronToBack.Areas.AdminArea.ViewModels
         public string Email { get; set; }
 
         public string UserName { get; set; }
+
+        public string Role { get; set; }
     }
 }

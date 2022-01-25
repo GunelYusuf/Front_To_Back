@@ -1,5 +1,4 @@
-﻿using FronToBack.Models;
-using FrontToBack.Models;
+﻿using FrontToBack.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

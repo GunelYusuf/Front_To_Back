@@ -1,10 +1,9 @@
 ﻿<Properties StartupConfiguration="{8A866B83-CC8F-4F24-8043-6EB8BD17C84F}|FrontToBack">
   <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Areas/AdminArea/ViewModels/UserVM.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Areas/AdminArea/Views/User/Index.cshtml">
     <Files>
-      <File FileName="Areas/AdminArea/Controllers/UserController.cs" Line="14" Column="8" />
-      <File FileName="Areas/AdminArea/Views/User/Index.cshtml" Line="1" Column="1" />
-      <File FileName="Areas/AdminArea/ViewModels/UserVM.cs" Line="1" Column="1" />
+      <File FileName="Areas/AdminArea/Views/User/Index.cshtml" Line="4" Column="1" />
+      <File FileName="Areas/AdminArea/Controllers/UserController.cs" Line="25" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,15 +13,17 @@
               <Node name="Areas" expanded="True">
                 <Node name="AdminArea" expanded="True">
                   <Node name="Controllers" expanded="True" />
-                  <Node name="ViewModels" expanded="True">
-                    <Node name="UserVM.cs" selected="True" />
-                  </Node>
+                  <Node name="ViewModels" expanded="True" />
                   <Node name="Views" expanded="True">
-                    <Node name="User" expanded="True" />
+                    <Node name="User" expanded="True">
+                      <Node name="Index.cshtml" selected="True" />
+                    </Node>
                   </Node>
                 </Node>
               </Node>
               <Node name="Controllers" expanded="True" />
+              <Node name="DAL" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="ViewComponents" expanded="True" />
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">

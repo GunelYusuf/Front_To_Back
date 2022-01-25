@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 
-namespace FronToBack.Extensions
+namespace FrontToBack.Extensions
 {
     public static class Extension
     {
