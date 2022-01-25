@@ -43,6 +43,7 @@
     <None Remove="Areas\AdminArea\Views\Product\" />
     <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
     <None Remove="Views\Account\" />
+    <None Remove="Areas\AdminArea\Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -75,6 +76,7 @@
     <Folder Include="Extensions\" />
     <Folder Include="Areas\AdminArea\Views\Product\" />
     <Folder Include="Views\Account\" />
+    <Folder Include="Areas\AdminArea\Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />

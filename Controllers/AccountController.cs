@@ -101,8 +101,6 @@ namespace FronToBack.Controllers
                 return RedirectToAction("Index", "Dashboard", new { area = "AdminArea" });
             }
 
-           
-
             return RedirectToAction("Index", "Home");
         }
 
