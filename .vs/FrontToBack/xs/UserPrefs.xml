@@ -1,12 +1,14 @@
 ﻿<Properties StartupConfiguration="{8A866B83-CC8F-4F24-8043-6EB8BD17C84F}|FrontToBack">
   <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/AccountController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Areas/AdminArea/Controllers/RoleController.cs">
     <Files>
-      <File FileName="Areas/AdminArea/Controllers/RoleController.cs" Line="88" Column="1" />
+      <File FileName="Areas/AdminArea/Controllers/RoleController.cs" Line="68" Column="17" />
       <File FileName="ViewModels/UpdateRoleVM.cs" Line="10" Column="34" />
-      <File FileName="Areas/AdminArea/Views/User/Index.cshtml" Line="64" Column="27" />
+      <File FileName="Areas/AdminArea/Views/User/Index.cshtml" Line="60" Column="92" />
       <File FileName="Areas/AdminArea/Views/Role/Update.cshtml" Line="12" Column="28" />
-      <File FileName="Controllers/AccountController.cs" Line="1" Column="1" />
+      <File FileName="Controllers/AccountController.cs" Line="92" Column="12" />
+      <File FileName="Areas/AdminArea/ViewModels/UserRoleVM.cs" Line="1" Column="1" />
+      <File FileName="Areas/AdminArea/ViewModels/UserVM.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,16 +17,17 @@
             <Node name="FronToBack" expanded="True">
               <Node name="Areas" expanded="True">
                 <Node name="AdminArea" expanded="True">
-                  <Node name="Controllers" expanded="True" />
+                  <Node name="Controllers" expanded="True">
+                    <Node name="RoleController.cs" selected="True" />
+                  </Node>
+                  <Node name="ViewModels" expanded="True" />
                   <Node name="Views" expanded="True">
                     <Node name="Role" expanded="True" />
                     <Node name="User" expanded="True" />
                   </Node>
                 </Node>
               </Node>
-              <Node name="Controllers" expanded="True">
-                <Node name="AccountController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True" />

@@ -57,7 +57,7 @@
                             <i class="icon-info"></i>
                         </a>
 
-                        <a asp-controller="User" asp-action="Delete" asp-route-id="" class="btn btn-danger">
+                        <a asp-controller="User" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">
                             <i class="icon-magnifier-remove"></i>
                         </a>
                         <a asp-controller="Role" asp-action="Update" asp-route-id="@item.Id" class="btn btn-warning">

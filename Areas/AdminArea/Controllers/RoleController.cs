@@ -53,17 +53,23 @@ namespace FronToBack.Areas.AdminArea.Controllers
             return NotFound();
         }
 
+        public IActionResult Delete(string id)
+        {
+            var role = _userManager.FindByIdAsync(id);
+            return View();
+        }
+
         [HttpPost]
         [AutoValidateAntiforgeryToken]
+        [ActionName("Delete")]
 
-        public async Task<IActionResult> Delete(string role)
+        public async Task<IActionResult> DeleteRole(string id)
         {
-
-            if (!await _roleManager.RoleExistsAsync(role))
+            if (await _roleManager.RoleExistsAsync(id))
             {
-                await _roleManager.DeleteAsync(new IdentityRole(role));
+                await _roleManager.DeleteAsync(new IdentityRole(id));
             }
-            return NotFound();
+            return RedirectToAction("Index");
         }
 
 
@@ -86,15 +92,15 @@ namespace FronToBack.Areas.AdminArea.Controllers
         public async Task<IActionResult> Update(string id,IList<string>Roles)
         {
             var user = await _userManager.FindByIdAsync(id);
-            UpdateRoleVM updateUserRole = new UpdateRoleVM
-            {
-                User = user,
-                UserId = user.Id,
-                Roles = _roleManager.Roles.ToList(),
-                UserRoles = await _userManager.GetRolesAsync(user)
-            };
-            return View(updateUserRole);
+            var  allRoles = _roleManager.Roles.ToList();
+            var  userRoles = await _userManager.GetRolesAsync(user);
 
+            var addedRoles = Roles.Except(userRoles);
+            var removedRoles = userRoles.Except(Roles);
+            await _userManager.AddToRolesAsync(user,addedRoles);
+            await _userManager.RemoveFromRolesAsync(user,removedRoles);
+
+            return RedirectToAction("Index");
         }
 
     }

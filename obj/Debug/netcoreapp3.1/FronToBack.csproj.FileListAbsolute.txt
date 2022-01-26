@@ -144,6 +144,7 @@
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Product/Update.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Role/Create.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Role/Index.cshtml.g.cs
+/Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Role/Update.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Shared/_Validation.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Slider/Create.cshtml.g.cs
@@ -179,4 +180,4 @@
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.dll
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.pdb
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.genruntimeconfig.cache
-/Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Role/Update.cshtml.g.cs
+/Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Role/Delete.cshtml.g.cs
