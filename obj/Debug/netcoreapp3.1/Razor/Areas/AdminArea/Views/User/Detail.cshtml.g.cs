@@ -34,6 +34,13 @@ using FronToBack.Areas.AdminArea.Controllers;
 #line hidden
 #nullable disable
 #nullable restore
+#line 5 "/Users/gunelyusubova/Desktop/FrontToBack/Areas/AdminArea/Views/_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "/Users/gunelyusubova/Desktop/FrontToBack/Areas/AdminArea/Views/User/Detail.cshtml"
 using FrontToBack.Areas.AdminArea.ViewModels;
 
@@ -41,7 +48,7 @@ using FrontToBack.Areas.AdminArea.ViewModels;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ad429ec972b8b5e69c5dd76e5a4dcf1a78f00794", @"/Areas/AdminArea/Views/User/Detail.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"815562b8f7cf1ec577ed9a1b499897bf90a54bc9", @"/Areas/AdminArea/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"54a4b004e5c581b188af628793c3e2b91bdfbad6", @"/Areas/AdminArea/Views/_ViewImports.cshtml")]
     public class Areas_AdminArea_Views_User_Detail : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<UserRoleVM>
     {
         #pragma warning disable 1998

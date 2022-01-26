@@ -33,8 +33,15 @@ using FronToBack.Areas.AdminArea.Controllers;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 5 "/Users/gunelyusubova/Desktop/FrontToBack/Areas/AdminArea/Views/_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ddb404042f639067f8d6b701687faa1b958d9a34", @"/Areas/AdminArea/Views/Category/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"815562b8f7cf1ec577ed9a1b499897bf90a54bc9", @"/Areas/AdminArea/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"54a4b004e5c581b188af628793c3e2b91bdfbad6", @"/Areas/AdminArea/Views/_ViewImports.cshtml")]
     public class Areas_AdminArea_Views_Category_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<CATEGORY1>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("btn btn-primary"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -71,7 +78,7 @@ using FronToBack.Areas.AdminArea.Controllers;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("\n<div class=\"col-lg-6 grid-margin stretch-card\">\n    <div class=\"card\">\n        <div class=\"card-body\">\n            <h4 class=\"card-title\">Hoverable Table</h4>\n            <p class=\"card-description\">\n               ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ddb404042f639067f8d6b701687faa1b958d9a346546", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ddb404042f639067f8d6b701687faa1b958d9a346740", async() => {
                 WriteLiteral(" Create Category");
             }
             );
@@ -118,7 +125,7 @@ using FronToBack.Areas.AdminArea.Controllers;
 #line hidden
 #nullable disable
             WriteLiteral("</td>\n                            <td>\n                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ddb404042f639067f8d6b701687faa1b958d9a348895", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ddb404042f639067f8d6b701687faa1b958d9a349089", async() => {
                 WriteLiteral("\n                                    <i class=\"icon-credit-card\"></i>\n                                ");
             }
             );
@@ -152,7 +159,7 @@ using FronToBack.Areas.AdminArea.Controllers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\n                            </td>\n                            <td>\n                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ddb404042f639067f8d6b701687faa1b958d9a3411547", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ddb404042f639067f8d6b701687faa1b958d9a3411741", async() => {
                 WriteLiteral("\n                                    <i class=\"icon-info\"></i>\n                                ");
             }
             );
@@ -186,7 +193,7 @@ using FronToBack.Areas.AdminArea.Controllers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\n                            </td>\n                            <td>\n                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ddb404042f639067f8d6b701687faa1b958d9a3414193", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ddb404042f639067f8d6b701687faa1b958d9a3414387", async() => {
                 WriteLiteral("\n                                    <i class=\"icon-magnifier-remove\"></i>\n                                ");
             }
             );

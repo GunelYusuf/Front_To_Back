@@ -33,8 +33,15 @@ using FronToBack.Areas.AdminArea.Controllers;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 5 "/Users/gunelyusubova/Desktop/FrontToBack/Areas/AdminArea/Views/_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b5e52b3d5c9c2df0a6992e9e679eb9976b251f38", @"/Areas/AdminArea/Views/Slider/Delete.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"815562b8f7cf1ec577ed9a1b499897bf90a54bc9", @"/Areas/AdminArea/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"54a4b004e5c581b188af628793c3e2b91bdfbad6", @"/Areas/AdminArea/Views/_ViewImports.cshtml")]
     public class Areas_AdminArea_Views_Slider_Delete : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Slider>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Slider", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -80,7 +87,7 @@ using FronToBack.Areas.AdminArea.Controllers;
 #line hidden
 #nullable disable
             WriteLiteral("\n<div class=\"container\">\n    <div class=\"row\">\n        <div class=\"col-6\">\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "b5e52b3d5c9c2df0a6992e9e679eb9976b251f386089", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "b5e52b3d5c9c2df0a6992e9e679eb9976b251f386283", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -103,7 +110,7 @@ AddHtmlAttributeValue("", 165, Model.ImageUrl, 165, 15, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\n        </div>\n\n        <div class=\"col-6\">\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b5e52b3d5c9c2df0a6992e9e679eb9976b251f387614", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b5e52b3d5c9c2df0a6992e9e679eb9976b251f387808", async() => {
                 WriteLiteral("Go Back");
             }
             );
@@ -123,7 +130,7 @@ AddHtmlAttributeValue("", 165, Model.ImageUrl, 165, 15, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\n        </div>\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b5e52b3d5c9c2df0a6992e9e679eb9976b251f389144", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b5e52b3d5c9c2df0a6992e9e679eb9976b251f389338", async() => {
                 WriteLiteral("\n             <button class=\"btn btn-danger\">Delete</button>\n        ");
             }
             );

@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using FrontToBack.Models;
 using FrontToBack.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FrontToBack.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AccountController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
@@ -63,6 +65,7 @@ namespace FrontToBack.Controllers
 
         public IActionResult LogIn()
         {
+            
             if (User.Identity.IsAuthenticated)
             {
                 return RedirectToAction("Index","Home");

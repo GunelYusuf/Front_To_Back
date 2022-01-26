@@ -120,6 +120,7 @@
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.csproj.AssemblyReference.cache
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.GeneratedMSBuildEditorConfig.editorconfig
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.AssemblyInfoInputs.cache
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.AssemblyInfo.cs
@@ -142,6 +143,7 @@
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Product/Detail.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Product/Index.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Product/Update.cshtml.g.cs
+/Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Roles/Index.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Shared/_Validation.cshtml.g.cs
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/Razor/Areas/AdminArea/Views/Slider/Create.cshtml.g.cs
