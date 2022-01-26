@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Threading.Tasks;
 using FrontToBack.DAL;
 using FrontToBack.Models;
 using Microsoft.AspNetCore.Identity;
@@ -24,8 +25,30 @@ namespace FronToBack.Areas.AdminArea.Controllers
 
             public IActionResult Index()
             {
-            var roles = _roleManager.Roles.ToList();
+               var roles = _roleManager.Roles.ToList();
                return View(roles);
             }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [AutoValidateAntiforgeryToken]
+
+        public async Task<IActionResult> Create(string role)
+        {
+            if (!string.IsNullOrEmpty(role))
+            {
+                if (!await _roleManager.RoleExistsAsync(role))
+                {
+                    await _roleManager.CreateAsync(new IdentityRole(role));
+                }
+                return RedirectToAction("Index");
+            }
+
+            return NotFound();
+        }
     }
 }
