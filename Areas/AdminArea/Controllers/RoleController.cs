@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FronToBack.ViewModels;
@@ -67,6 +68,22 @@ namespace FronToBack.Areas.AdminArea.Controllers
 
 
         public async Task<IActionResult> Update(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            UpdateRoleVM updateUserRole = new UpdateRoleVM
+            {
+                User = user,
+                UserId = user.Id,
+                Roles = _roleManager.Roles.ToList(),
+                UserRoles = await _userManager.GetRolesAsync(user)
+            };
+            return View(updateUserRole);
+
+        }
+
+        [HttpPost]
+        [AutoValidateAntiforgeryToken]
+        public async Task<IActionResult> Update(string id,IList<string>Roles)
         {
             var user = await _userManager.FindByIdAsync(id);
             UpdateRoleVM updateUserRole = new UpdateRoleVM

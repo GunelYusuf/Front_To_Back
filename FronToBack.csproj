@@ -44,7 +44,6 @@
     <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
     <None Remove="Views\Account\" />
     <None Remove="Areas\AdminArea\Views\User\" />
-    <None Remove="Areas\AdminArea\Views\Roles\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -78,7 +77,6 @@
     <Folder Include="Areas\AdminArea\Views\Product\" />
     <Folder Include="Views\Account\" />
     <Folder Include="Areas\AdminArea\Views\User\" />
-    <Folder Include="Areas\AdminArea\Views\Roles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
