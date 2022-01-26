@@ -89,6 +89,28 @@ namespace FronToBack.Areas.AdminArea.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        public IActionResult UpdateUser(string id)
+        {
+            if (id == null) return NotFound();
+            var user = _userManager.FindByIdAsync(id);
+            return View(user);
+        }
 
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public async Task<IActionResult> UpdateUser(AppUser appUser)
+        {
+            AppUser user = await _userManager.FindByIdAsync(appUser.Id);
+            
+            user.FullName = appUser.FullName;
+            user.UserName = appUser.UserName;
+            user.Email = appUser.Email;
+            user.Roles = appUser.Roles;
+            await _userManager.UpdateAsync(user);
+            return View();
+
+        }
     }
 }

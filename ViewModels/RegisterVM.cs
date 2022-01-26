@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace FrontToBack.ViewModels
@@ -28,5 +29,7 @@ namespace FrontToBack.ViewModels
         [DataType(DataType.Password), Compare(nameof(Password))]
 
         public string ConfirmPassword { get; set; }
+
+       
     }
 }

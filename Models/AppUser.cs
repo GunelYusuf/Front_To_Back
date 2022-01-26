@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
 
 namespace FrontToBack.Models
@@ -9,6 +10,6 @@ namespace FrontToBack.Models
 
         public string FullName { get; set; }
 
-
+        public IList<string> Roles;
     }
 }
