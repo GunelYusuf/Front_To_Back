@@ -63,6 +63,10 @@ namespace FrontToBack.Controllers
 
         public IActionResult LogIn()
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index","Home");
+            }
             return View();
         }
 

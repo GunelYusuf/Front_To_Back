@@ -1,13 +1,11 @@
 ﻿<Properties StartupConfiguration="{8A866B83-CC8F-4F24-8043-6EB8BD17C84F}|FrontToBack">
   <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/AccountController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Areas/AdminArea/Controllers/DashboardController.cs">
     <Files>
-      <File FileName="Models/AppUser.cs" Line="13" Column="29" />
       <File FileName="Areas/AdminArea/Controllers/UserController.cs" Line="32" Column="42" />
-      <File FileName="Areas/AdminArea/Views/User/Index.cshtml" Line="40" Column="33" />
-      <File FileName="Areas/AdminArea/Controllers/DashboardController.cs" Line="1" Column="1" />
-      <File FileName="Areas/AdminArea/Views/Shared/_AdminLayout.cshtml" Line="173" Column="26" />
-      <File FileName="Controllers/AccountController.cs" Line="40" Column="15" />
+      <File FileName="Areas/AdminArea/Views/User/Index.cshtml" Line="35" Column="27" />
+      <File FileName="Controllers/AccountController.cs" Line="66" Column="13" />
+      <File FileName="Areas/AdminArea/Controllers/DashboardController.cs" Line="9" Column="28" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,24 +14,19 @@
             <Node name="FronToBack" expanded="True">
               <Node name="Areas" expanded="True">
                 <Node name="AdminArea" expanded="True">
-                  <Node name="Controllers" expanded="True" />
+                  <Node name="Controllers" expanded="True">
+                    <Node name="DashboardController.cs" selected="True" />
+                  </Node>
                   <Node name="ViewModels" expanded="True" />
                   <Node name="Views" expanded="True">
-                    <Node name="Dashboard" expanded="True" />
-                    <Node name="Shared" expanded="True" />
                     <Node name="User" expanded="True" />
                   </Node>
                 </Node>
               </Node>
-              <Node name="Controllers" expanded="True">
-                <Node name="AccountController.cs" selected="True" />
-              </Node>
-              <Node name="DAL" expanded="True" />
+              <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="ViewComponents" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Account" expanded="True" />
                 <Node name="Shared" expanded="True">
                   <Node name="Components" expanded="True">
                     <Node name="Header" expanded="True" />
