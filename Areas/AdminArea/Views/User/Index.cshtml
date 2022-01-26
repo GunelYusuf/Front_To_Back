@@ -18,6 +18,7 @@
                         <th>FullName</th>
                         <th>Email</th>
                         <th>UserName</th>
+                        <th>Active</th>
                         <th>Settings</th>
                     </tr>
                 </thead>
@@ -29,6 +30,15 @@
                         <td>@item.FullName</td>
                         <td>@item.Email</td>
                         <td>@item.UserName</td>
+                        @if (!item.IsActive)
+                         {
+                          <td> <a asp-controller="User" asp-action="IsActive" asp-route-id="@item.Id" class="btn btn-danger">Deactive</a></td>
+                           
+                         }
+                        else
+                        {
+                           <td> <a  asp-controller="User" asp-action="IsActive" asp-route-id="@item.Id" class="btn btn-success">Active</a></td> 
+                        }
                         <td>
                             <a asp-controller="User" asp-action="Update" asp-route-id="" class="btn btn-success">
                                 <i class="icon-credit-card"></i>

@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using FronToBack.Areas.AdminArea.ViewModels;
 using FrontToBack.Areas.AdminArea.ViewModels;
+using FrontToBack.DAL;
 using FrontToBack.Models;
 using FrontToBack.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -19,14 +20,16 @@ namespace FronToBack.Areas.AdminArea.Controllers
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly Context _context;
 
-        public UserController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager)
+        public UserController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager,Context context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
+            _context = context;
         }
-        public IActionResult Index(string name)
+        public async Task<IActionResult> Index(string name)
         {
 
             var users = name == null ? _userManager.Users.ToList() :
@@ -109,6 +112,28 @@ namespace FronToBack.Areas.AdminArea.Controllers
             await _userManager.UpdateAsync(user);
             return View();
 
+        }
+
+
+        public async Task<IActionResult> IsActive(string id)
+        {
+            AppUser user = await _userManager.FindByIdAsync(id);
+            if (user==null)
+            {
+                return NotFound();
+            }
+            if (user.IsActive)
+            {
+                user.IsActive = false;
+            }
+            else
+            {
+                user.IsActive = true;
+            }
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Index");
         }
     }
 }

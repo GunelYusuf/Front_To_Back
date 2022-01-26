@@ -38,7 +38,9 @@ namespace FrontToBack.Controllers
                 Email=register.Email
 
             };
+           // user.IsActive = true;
             IdentityResult identityResult = await _userManager.CreateAsync(user, register.Password);
+
             if (!identityResult.Succeeded)
             {
                 foreach (var error in identityResult.Errors)
@@ -79,9 +81,15 @@ namespace FrontToBack.Controllers
             }
 
             var signInResult = await _signInManager.PasswordSignInAsync(dbUser, login.Password, true, true);
+
+            if (dbUser.IsActive == false)
+            {
+                ModelState.AddModelError("", "User is Deactive");
+                return View();
+            }
+
             if (signInResult.IsLockedOut)
             {
-
                 ModelState.AddModelError("", "is LockOut");
                 return View();
             }
