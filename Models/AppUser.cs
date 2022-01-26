@@ -9,7 +9,5 @@ namespace FrontToBack.Models
         [Required,StringLength(maximumLength:50)]
 
         public string FullName { get; set; }
-
-        public IList<string> Roles;
     }
 }

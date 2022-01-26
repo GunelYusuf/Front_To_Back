@@ -1,16 +1,9 @@
 ﻿<Properties StartupConfiguration="{8A866B83-CC8F-4F24-8043-6EB8BD17C84F}|FrontToBack">
   <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Areas/AdminArea/Views/Category/Update.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Areas/AdminArea/Views/User/Update.cshtml">
     <Files>
-      <File FileName="Areas/AdminArea/Controllers/UserController.cs" Line="110" Column="40" />
-      <File FileName="Areas/AdminArea/ViewModels/UserRoleVM.cs" Line="12" Column="8" />
-      <File FileName="Areas/AdminArea/Views/User/Update.cshtml" Line="55" Column="68" />
-      <File FileName="Areas/AdminArea/Views/User/Create.cshtml" Line="4" Column="1" />
-      <File FileName="Areas/AdminArea/ViewModels/CreateUserVM.cs" Line="1" Column="1" />
-      <File FileName="Areas/AdminArea/ViewModels/UserVM.cs" Line="1" Column="1" />
-      <File FileName="Models/AppUser.cs" Line="12" Column="36" />
-      <File FileName="ViewModels/RegisterVM.cs" Line="33" Column="8" />
-      <File FileName="Areas/AdminArea/Views/Category/Update.cshtml" Line="28" Column="7" />
+      <File FileName="Areas/AdminArea/Controllers/UserController.cs" Line="66" Column="64" />
+      <File FileName="Areas/AdminArea/Views/User/Update.cshtml" Line="53" Column="32" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,10 +15,10 @@
                   <Node name="Controllers" expanded="True" />
                   <Node name="ViewModels" expanded="True" />
                   <Node name="Views" expanded="True">
-                    <Node name="Category" expanded="True">
+                    <Node name="Category" expanded="True" />
+                    <Node name="User" expanded="True">
                       <Node name="Update.cshtml" selected="True" />
                     </Node>
-                    <Node name="User" expanded="True" />
                   </Node>
                 </Node>
               </Node>

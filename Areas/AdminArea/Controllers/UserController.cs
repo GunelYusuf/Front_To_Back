@@ -63,7 +63,7 @@ namespace FronToBack.Areas.AdminArea.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public async Task<IActionResult> CreateUser(CreateUserVM user)
+        public async Task<IActionResult> CreateUser(RegisterVM user)
         {
             if (!ModelState.IsValid) return View();
             AppUser appUser = new AppUser
@@ -82,8 +82,6 @@ namespace FronToBack.Areas.AdminArea.Controllers
                 }
                 return View();
             }
-
-            await _userManager.AddToRoleAsync(appUser, $"{user.Role}");
             await _signInManager.SignInAsync(appUser, true);
 
             return RedirectToAction("Index", "Home");
@@ -106,8 +104,8 @@ namespace FronToBack.Areas.AdminArea.Controllers
             
             user.FullName = appUser.FullName;
             user.UserName = appUser.UserName;
+            user.PasswordHash = appUser.PasswordHash;
             user.Email = appUser.Email;
-            user.Roles = appUser.Roles;
             await _userManager.UpdateAsync(user);
             return View();
 
