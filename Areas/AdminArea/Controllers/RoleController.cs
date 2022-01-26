@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Threading.Tasks;
+using FronToBack.ViewModels;
 using FrontToBack.DAL;
 using FrontToBack.Models;
 using Microsoft.AspNetCore.Identity;
@@ -43,12 +44,41 @@ namespace FronToBack.Areas.AdminArea.Controllers
             {
                 if (!await _roleManager.RoleExistsAsync(role))
                 {
-                    await _roleManager.CreateAsync(new IdentityRole(role));
+                    await _roleManager.CreateAsync(new IdentityRole(role.Trim()));
                 }
                 return RedirectToAction("Index");
             }
 
             return NotFound();
         }
+
+        [HttpPost]
+        [AutoValidateAntiforgeryToken]
+
+        public async Task<IActionResult> Delete(string role)
+        {
+
+            if (!await _roleManager.RoleExistsAsync(role))
+            {
+                await _roleManager.DeleteAsync(new IdentityRole(role));
+            }
+            return NotFound();
+        }
+
+
+        public async Task<IActionResult> Update(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            UpdateRoleVM updateUserRole = new UpdateRoleVM
+            {
+                User = user,
+                UserId = user.Id,
+                Roles = _roleManager.Roles.ToList(),
+                UserRoles = await _userManager.GetRolesAsync(user)
+            };
+            return View(updateUserRole);
+
+        }
+
     }
 }
