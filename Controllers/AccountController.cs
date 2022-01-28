@@ -172,7 +172,9 @@ namespace FrontToBack.Controllers
                     smtp.Credentials = new NetworkCredential("guntebrustemov", "gunteb7@");
                     smtp.EnableSsl = true;
                     smtp.Send(mail);
+                   
                 }
+                return Content("salam");
                 return RedirectToAction("Home", "Index");
             }
         }
