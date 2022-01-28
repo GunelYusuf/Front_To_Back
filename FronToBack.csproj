@@ -44,6 +44,7 @@
     <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
     <None Remove="Views\Account\" />
     <None Remove="Areas\AdminArea\Views\User\" />
+    <None Remove="MailKit" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -97,5 +98,6 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.0" />
+    <PackageReference Include="MailKit" Version="3.1.0" />
   </ItemGroup>
 </Project>
