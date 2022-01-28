@@ -1,4 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System.Net;
+using System.Net.Mail;
+using System.Threading.Tasks;
+using FronToBack.ViewModels;
 using FrontToBack.Models;
 using FrontToBack.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -9,14 +12,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FrontToBack.Controllers
 {
-   
+
     public class AccountController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
 
-        public AccountController(UserManager<AppUser> userManager,SignInManager<AppUser> signInManager,RoleManager<IdentityRole> roleManager)
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -36,11 +39,11 @@ namespace FrontToBack.Controllers
             AppUser user = new AppUser
             {
                 FullName = register.FullName,
-                UserName=register.UserName,
-                Email=register.Email
+                UserName = register.UserName,
+                Email = register.Email
 
             };
-           // user.IsActive = true;
+            // user.IsActive = true;
             IdentityResult identityResult = await _userManager.CreateAsync(user, register.Password);
 
             if (!identityResult.Succeeded)
@@ -65,10 +68,10 @@ namespace FrontToBack.Controllers
 
         public IActionResult LogIn()
         {
-            
+
             if (User.Identity.IsAuthenticated)
             {
-                return RedirectToAction("Index","Home");
+                return RedirectToAction("Index", "Home");
             }
             return View();
         }
@@ -108,7 +111,7 @@ namespace FrontToBack.Controllers
 
             var roles = await _userManager.GetRolesAsync(dbUser);
 
-            if (roles[0]=="Admin")
+            if (roles[0] == "Admin")
             {
                 return RedirectToAction("Index", "Dashboard", new { area = "AdminArea" });
             }
@@ -143,5 +146,41 @@ namespace FrontToBack.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        [AutoValidateAntiforgeryToken]
+
+        public async Task<IActionResult> ForgetPassword(ForgetPassword forget)
+        {
+            AppUser user = await _userManager.FindByEmailAsync(forget.User.Email);
+            if (user == null) NotFound();
+
+
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+            var link = Url.Action(nameof(ResetPassword), "Account", new { email = user.Email, token }, Request.Scheme);
+            using (MailMessage mail = new MailMessage())
+            {
+                mail.From = new MailAddress("guntebrustemov@gmail.com", "Reset");
+                mail.To.Add(user.Email);
+                mail.Subject = "Reset Password";
+                mail.Body = $"<a href={link}>Go to Reset Password</a>";
+                mail.IsBodyHtml = true;
+
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    smtp.Credentials = new NetworkCredential("guntebrustemov", "gunteb7@");
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
+                }
+                return RedirectToAction("Home", "Index");
+            }
+        }
+
+        public IActionResult ResetPassword(string email, string token)
+        {
+            return View();
+        }
     }
+
 }

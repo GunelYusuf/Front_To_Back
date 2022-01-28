@@ -7,6 +7,7 @@
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/FronToBack.Views.dll
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/FronToBack.Views.pdb
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/Json.Net.dll
+/Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/MailKit.dll
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Razor.Language.dll
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
@@ -47,8 +48,10 @@
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+/Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/MimeKit.dll
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/NuGet.Frameworks.dll
+/Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/BouncyCastle.Crypto.dll
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/System.Collections.Immutable.dll
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/System.Composition.AttributedModel.dll
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/System.Composition.Convention.dll
@@ -120,6 +123,7 @@
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll
 /Users/gunelyusubova/Desktop/FrontToBack/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.csproj.AssemblyReference.cache
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.GeneratedMSBuildEditorConfig.editorconfig
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.AssemblyInfoInputs.cache
 /Users/gunelyusubova/Desktop/FrontToBack/obj/Debug/netcoreapp3.1/FronToBack.AssemblyInfo.cs
