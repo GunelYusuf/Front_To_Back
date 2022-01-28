@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FrontToBack.Controllers
 {
-    [Authorize(Roles = "Admin")]
+   
     public class AccountController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
@@ -127,7 +127,6 @@ namespace FrontToBack.Controllers
             return View();
         }
 
-
         public async Task CreateRole()
         {
             if (!await _roleManager.RoleExistsAsync("Admin"))
@@ -138,6 +137,11 @@ namespace FrontToBack.Controllers
             {
                 await _roleManager.CreateAsync(new IdentityRole { Name = "Member" });
             }
+        }
+
+        public IActionResult ForgetPassword()
+        {
+            return View();
         }
     }
 }

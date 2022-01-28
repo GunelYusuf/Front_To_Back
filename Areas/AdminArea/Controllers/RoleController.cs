@@ -4,12 +4,14 @@ using System.Threading.Tasks;
 using FronToBack.ViewModels;
 using FrontToBack.DAL;
 using FrontToBack.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FronToBack.Areas.AdminArea.Controllers
 {
     [Area("AdminArea")]
+    [Authorize(Roles = "Admin")]
     public class RoleController : Controller
     {
             private readonly UserManager<AppUser> _userManager;
@@ -53,22 +55,16 @@ namespace FronToBack.Areas.AdminArea.Controllers
             return NotFound();
         }
 
-        public IActionResult Delete(string id)
-        {
-            var role = _userManager.FindByIdAsync(id);
-            return View();
-        }
+        
 
         [HttpPost]
         [AutoValidateAntiforgeryToken]
-        [ActionName("Delete")]
 
-        public async Task<IActionResult> DeleteRole(string id)
+        public async Task<IActionResult> Delete(string id)
         {
-            if (await _roleManager.RoleExistsAsync(id))
-            {
-                await _roleManager.DeleteAsync(new IdentityRole(id));
-            }
+            var role = _userManager.FindByIdAsync(id);
+            await _roleManager.DeleteAsync(new IdentityRole(id));
+            
             return RedirectToAction("Index");
         }
 
