@@ -172,16 +172,50 @@ namespace FrontToBack.Controllers
                     smtp.Credentials = new NetworkCredential("guntebrustemov", "gunteb7@");
                     smtp.EnableSsl = true;
                     smtp.Send(mail);
-                   
+
                 }
-                return Content("salam");
                 return RedirectToAction("Home", "Index");
             }
         }
 
-        public IActionResult ResetPassword(string email, string token)
+        public async Task<IActionResult> ResetPassword(string email,string token)
         {
-            return View();
+            AppUser user = await _userManager.FindByEmailAsync(email);
+            if (user == null) NotFound();
+
+            ForgetPassword forgetPassword = new ForgetPassword
+            {
+                Token =token,
+                User = user
+            };
+            return View(forgetPassword);
+        }
+
+       [HttpPost]
+       [AutoValidateAntiforgeryToken]
+       [ActionName("ResetPassword")]
+
+        public async Task<IActionResult> ResetPassword(ForgetPassword model)
+        {
+            AppUser user = await _userManager.FindByEmailAsync(model.User.Email);
+            if (user == null) NotFound();
+
+            ForgetPassword forgetPassword = new ForgetPassword
+            {
+                Token = model.Token,
+                User = user
+            };
+            //if (!ModelState.IsValid) return View(forgetPassword);
+           
+
+            IdentityResult result = await _userManager.ResetPasswordAsync(user, model.Token, model.Password);
+
+            foreach (var item in result.Errors)
+            {
+                ModelState.AddModelError("", item.Description);
+                
+            }
+            return RedirectToAction("Index","Home");
         }
     }
 

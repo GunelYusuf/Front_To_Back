@@ -3,18 +3,18 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/AccountController.cs">
     <Files>
       <File FileName="ViewModels/ForgetPassword.cs" Line="18" Column="1" />
-      <File FileName="Controllers/AccountController.cs" Line="142" Column="8" />
+      <File FileName="Controllers/AccountController.cs" Line="215" Column="15" />
+      <File FileName="Views/Account/ResetPassword.cshtml" Line="6" Column="15" />
+      <File FileName="Views/Account/ForgetPassword.cshtml" Line="14" Column="7" />
+      <File FileName="Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="Startup.cs" Line="1" Column="1" />
+      <File FileName="FronToBack.csproj" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FrontToBack" expanded="True">
             <Node name="FronToBack" expanded="True">
-              <Node name="Areas" expanded="True">
-                <Node name="AdminArea" expanded="True">
-                  <Node name="Controllers" expanded="True" />
-                </Node>
-              </Node>
               <Node name="Controllers" expanded="True">
                 <Node name="AccountController.cs" selected="True" />
               </Node>
