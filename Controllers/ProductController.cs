@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using FronToBack.Models;
 using FrontToBack.DAL;
 using FrontToBack.Models;
@@ -59,7 +60,9 @@ namespace FrontToBack.Controllers
             IEnumerable<Comment> comments= _context.Comment.Where(c => c.PRODUCTS1Id == id);
 
             PRODUCTS1 pRODUCTS1 = _context.pRODUCTS1s.Include(c => c.CATEGORY1).FirstOrDefault(p => p.Id == id);
-
+            ViewBag.ProductID =pRODUCTS1.Id;
+            //var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            //ViewBag.UserID = userId;
             PRODUCTS1 pRODUCTS = new PRODUCTS1
             {
                 Name = pRODUCTS1.Name,
@@ -67,12 +70,9 @@ namespace FrontToBack.Controllers
                 CATEGORY1Id = pRODUCTS1.CATEGORY1Id,
                 ImageUrl = pRODUCTS1.ImageUrl,
                 CommentProduct = comments,
-
             };
             return View(pRODUCTS);
 
-
-           
         }
 
     }

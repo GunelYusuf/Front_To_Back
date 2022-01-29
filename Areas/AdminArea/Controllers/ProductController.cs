@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace FrontToBack.Areas.AdminArea.Controllers
 {
@@ -32,10 +33,13 @@ namespace FrontToBack.Areas.AdminArea.Controllers
 
         public async Task<IActionResult> Detail(int? Id)
         {
+
             if (Id == null) return NotFound();
             PRODUCTS1 dbProduct = await _context.pRODUCTS1s.FindAsync(Id);
             if (dbProduct == null) return NotFound();
-
+            ViewBag.ProductID = "salam";
+            var userId= HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            ViewBag.UserID = userId;
             return View(dbProduct);
         }
 

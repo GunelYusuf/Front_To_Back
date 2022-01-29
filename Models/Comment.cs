@@ -14,5 +14,7 @@ namespace FronToBack.Models
         public int PRODUCTS1Id { get; set; }
 
         public PRODUCTS1 PRODUCTS1 { get; set; }
+
+        public string UserId { get; set; }
     }
 }

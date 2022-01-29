@@ -117,13 +117,12 @@
                 </div>
                 <div class="review">
                     <div class="info">
-                        @foreach (var item in Model.CommentProduct)
+                       @foreach (var item in Model.CommentProduct)
                         {
-                            <span>Gunel Yusuf</span> <span> 27.04.2018</span>
+                            @*<span>@item.User.FullName</span> <span> 21.03.2022</span>*@
                             <p>
                                 @item.Comments
                             </p>
-
                         }
 
                     </div>
@@ -139,14 +138,16 @@
                             Your email address will not be published. Required fields are marked *
                         </span>
                     </div>
-                    <form action="" method="post">
-                        <label for="yourreiew"><span>Your review *</span></label><br>
-                        <input style="height: 200px;" type="text" name="yourreiew" required id=""><br>
+                    <form asp-controller="Comment" asp-action="Create" method="post">
+                        <label><span>Your review *</span></label><br>
+                        <input type="hidden" value="@ViewBag.ProductID" name="PRODUCTS1Id"  />
+                        <input type="hidden" value="@ViewBag.UserID" name="UserId"/>
+                        <input style="height: 200px; width:200px;" type="text" name="Comments"><br>
                         <span>
                             Save my name, email, and website in this browser for the next time I
                             comment.
                         </span><br>
-                        <button type="button"><span>SUBMIT</span></button>
+                        <button type="submit">SUBMIT</button>
                     </form>
                 </div>
             </div>

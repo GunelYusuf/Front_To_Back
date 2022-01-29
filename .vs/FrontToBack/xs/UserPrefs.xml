@@ -1,11 +1,13 @@
 ﻿<Properties StartupConfiguration="{8A866B83-CC8F-4F24-8043-6EB8BD17C84F}|FrontToBack">
   <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Models/PRODUCTS1.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Comment.cs">
     <Files>
-      <File FileName="Views/Product/Detail.cshtml" Line="124" Column="47" />
-      <File FileName="Controllers/ProductController.cs" Line="59" Column="1" />
-      <File FileName="Models/PRODUCTS1.cs" Line="28" Column="27" />
-      <File FileName="DAL/Context.cs" Line="1" Column="1" />
+      <File FileName="DAL/Context.cs" Line="1" Column="1" IsPinned="True" />
+      <File FileName="Views/Product/Detail.cshtml" Line="144" Column="82" />
+      <File FileName="Controllers/CommentController.cs" Line="38" Column="1" />
+      <File FileName="Areas/AdminArea/Controllers/UserController.cs" Line="75" Column="42" />
+      <File FileName="Models/Comment.cs" Line="18" Column="22" />
+      <File FileName="Controllers/ProductController.cs" Line="63" Column="21" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,7 +17,7 @@
               <Node name="Controllers" expanded="True" />
               <Node name="DAL" expanded="True" />
               <Node name="Models" expanded="True">
-                <Node name="PRODUCTS1.cs" selected="True" />
+                <Node name="Comment.cs" selected="True" />
               </Node>
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
@@ -23,7 +25,8 @@
                 <Node name="Product" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
-                <Node name="JS" expanded="True" />
+                <Node name="Product-List" expanded="True" />
+                <Node name="Products-Images" expanded="True" />
               </Node>
             </Node>
           </Node>
