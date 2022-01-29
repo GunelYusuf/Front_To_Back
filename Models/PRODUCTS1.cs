@@ -1,5 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using FronToBack.Models;
 using Microsoft.AspNetCore.Http;
 
 namespace FrontToBack.Models
@@ -22,6 +24,8 @@ namespace FrontToBack.Models
         [Required]
 
         public IFormFile ImageProduct { get; set; }
+
+        public IEnumerable<Comment> CommentProduct { get; set; }
 
     }
 }

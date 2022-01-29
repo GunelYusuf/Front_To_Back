@@ -1,4 +1,5 @@
-﻿using FrontToBack.Models;
+﻿using FronToBack.Models;
+using FrontToBack.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,9 +28,13 @@ namespace FrontToBack.DAL
 
         public DbSet<PRODUCTS1> pRODUCTS1s{ get; set; }
 
+        public DbSet<Comment> Comment { get; set; }
+
         public DbSet<Bio> Bios { get; set; }
 
         public DbSet<Footer> Footers { get; set; }
+
+
 
     }
 }

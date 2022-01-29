@@ -174,7 +174,7 @@ namespace FrontToBack.Controllers
                     smtp.Send(mail);
 
                 }
-                return RedirectToAction("Home", "Index");
+                return RedirectToAction("Index", "Home");
             }
         }
 
@@ -206,7 +206,6 @@ namespace FrontToBack.Controllers
                 User = user
             };
             //if (!ModelState.IsValid) return View(forgetPassword);
-           
 
             IdentityResult result = await _userManager.ResetPasswordAsync(user, model.Token, model.Password);
 

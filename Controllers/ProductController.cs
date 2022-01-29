@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using FronToBack.Models;
 using FrontToBack.DAL;
 using FrontToBack.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -55,9 +56,24 @@ namespace FrontToBack.Controllers
 
         public IActionResult Detail(int id)
         {
-            PRODUCTS1 pRODUCTS1 = _context.pRODUCTS1s.Include(c => c.CATEGORY1).FirstOrDefault(p => p.Id == id);
-            return View(pRODUCTS1);
+            IEnumerable<Comment> comments= _context.Comment.Where(c => c.PRODUCTS1Id == id);
 
+            PRODUCTS1 pRODUCTS1 = _context.pRODUCTS1s.Include(c => c.CATEGORY1).FirstOrDefault(p => p.Id == id);
+
+            PRODUCTS1 pRODUCTS = new PRODUCTS1
+            {
+                Name = pRODUCTS1.Name,
+                Price = pRODUCTS1.Price,
+                CATEGORY1Id = pRODUCTS1.CATEGORY1Id,
+                ImageUrl = pRODUCTS1.ImageUrl,
+                CommentProduct = comments,
+
+            };
+            return View(pRODUCTS);
+
+
+           
         }
+
     }
 }

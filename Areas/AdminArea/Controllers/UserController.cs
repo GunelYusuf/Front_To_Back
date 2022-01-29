@@ -33,7 +33,7 @@ namespace FronToBack.Areas.AdminArea.Controllers
         {
 
             var users = name == null ? _userManager.Users.ToList() :
-              _userManager.Users.Where(u => u.FullName.ToLower().Contains(name.ToLower())).ToList();
+             _userManager.Users.Where(u => u.FullName.ToLower().Contains(name.ToLower())).ToList();
             //List<UserVM> userVMs = new List<UserVM>();
             //foreach (var user in users)
             //{
