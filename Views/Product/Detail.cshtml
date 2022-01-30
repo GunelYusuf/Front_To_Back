@@ -125,8 +125,9 @@
                             </p>
                             <form asp-controller="Comment" asp-action="Update" method="post">
                                 <input type="hidden" value="@item.Id" name="id" />
-                                <input type="text" name="Comments" />
-                                <button type="submit">SUBMIT</button>
+                                <input type="text" name="Comments" /><br /><br />
+
+                                <button class="btn btn-outline-success" type="submit">SUBMIT</button>
                             </form>
                         }
 
@@ -147,7 +148,7 @@
                         <label><span>Your review *</span></label><br>
                         <input type="hidden" value="@ViewBag.ProductID" name="PRODUCTS1Id"  />
                         <input type="hidden" value="@ViewBag.UserID" name="UserId"/>
-                        <input style="height: 200px; width:200px;" type="text" name="Comments"><br>
+                        <input type="text" name="Comments"><br>
                         <span>
                             Save my name, email, and website in this browser for the next time I
                             comment.
