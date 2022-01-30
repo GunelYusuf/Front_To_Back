@@ -25,20 +25,24 @@
                 <tbody>
                     @foreach (var item in Model)
                     {
-                        double total = item.Price * item.Count;
-                        Total += total;
-                        <tr>
-                            <th scope="row">
-                                <img src="~/Products-Images/@item.ImageUrl" width="200px" height="200px" />
-                            </th>
-                            <td>@item.Name</td>
-                            <td>@item.Price</td>
-                            <td>@item.Count</td>
-                            <td>@total</td>
-                            <td>
-                                <a asp-controller="basket" asp-action="Remove" asp-route-id="@item.Id">X</a>
-                            </td>
-                        </tr>
+                        if (item.UserId == ViewBag.UserID)
+                        {
+                            double total = item.Price * item.Count;
+                            Total += total;
+                            <tr>
+                                <th scope="row">
+                                    <img src="~/Products-Images/@item.ImageUrl" width="200px" height="200px" />
+                                </th>
+                                <td>@item.Name</td>
+                                <td>@item.Price</td>
+                                <td>@item.Count</td>
+                                <td>@total</td>
+                                <td>
+                                    <a asp-controller="basket" asp-action="Remove" asp-route-id="@item.Id">X</a>
+                                </td>
+                            </tr>
+                        }
+
                     }
 
                 </tbody>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using FrontToBack.DAL;
 using FrontToBack.Models;
@@ -27,6 +28,12 @@ namespace FrontToBack.Controllers
 
         public async Task<IActionResult> AddBasket(int? id)
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("LogIn","Account");
+            }
+            var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+          
             if (id == null) return RedirectToAction("Index", "Error");
             PRODUCTS1 products = await _context.pRODUCTS1s.FindAsync(id);
             if (products == null) return RedirectToAction("Index", "Error");
@@ -51,7 +58,8 @@ namespace FrontToBack.Controllers
                     Name = products.Name,
                     ImageUrl = products.ImageUrl,
                     Price = products.Price,
-                    Count = 1
+                    Count = 1,
+                    UserId=userId
                 };
                 basketProductList.Add(basketProduct);
             }
@@ -67,6 +75,10 @@ namespace FrontToBack.Controllers
 
         public IActionResult ShowBasket()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index","Home");
+            }
             string basketCookie = Request.Cookies["basketCookie"];
             List<BasketProduct> basketProductList = new List<BasketProduct>();
             if (basketCookie != null)
@@ -82,7 +94,9 @@ namespace FrontToBack.Controllers
                 }
                 Response.Cookies.Append("basketCookie",JsonConvert.SerializeObject(basketProductList),new CookieOptions { MaxAge = TimeSpan.FromMinutes(14)});
             }
-            return Json(basketProductList);
+            var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            ViewBag.UserID = userId;
+            return View(basketProductList);
         }
 
         public IActionResult Remove(int? id)
@@ -94,7 +108,7 @@ namespace FrontToBack.Controllers
             BasketProduct isExistProduct = basketProductList.FirstOrDefault(p => p.Id == products.Id);
             basketProductList.Remove(isExistProduct);
             Response.Cookies.Append("basketCookie", JsonConvert.SerializeObject(basketProductList), new CookieOptions { MaxAge = TimeSpan.FromMinutes(14) });
-            return Json(basketProductList);
+            return View(basketProductList);
         }
     }
 }

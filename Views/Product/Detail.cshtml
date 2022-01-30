@@ -50,7 +50,7 @@
                         <div class="counter">
                             <i class="fas fa-chevron-left minus"></i><span class="counting">0</span><i class="fas fa-chevron-right plus"></i>
                         </div>
-                        <button type="button">ADD TO CART <span></span></button>
+                        <a  asp-controller="Basket" asp-action="AddBasket" asp-route-id="@Model.Id" >ADD TO CART <span></span></a>
                     </div>
                     @*<div class="details">
                         <span>SKU: <a href="">@Model.SKUCode</a></span>

@@ -11,7 +11,7 @@
             <div class="title text-center">
                 <p>@item.Name</p>
                 <div class="add-cart">
-                    <p class="addBasket">Add to cart</p>
+                    <a asp-controller="Basket" asp-action="AddBasket" asp-route-id="@item.Id" class="addBasket">Add to cart</a>
                 </div>
                 <div class="price">
                     <a asp-controller="basket" asp-action="addbasket" asp-route-id="@item.Id">
