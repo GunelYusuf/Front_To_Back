@@ -34,7 +34,7 @@ namespace FronToBack.Controllers
 
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [AutoValidateAntiforgeryToken]
 
         public async Task<ActionResult> Create(Comment comment)
         {
@@ -79,7 +79,9 @@ namespace FronToBack.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Update(int? id,Comment comment)
+        [AutoValidateAntiforgeryToken]
+
+        public async Task<IActionResult> Update(int? id, Comment comment)
         {
             if (id == null) return RedirectToAction("Index");
             Comment comments = _context.Comment.Find(id);
