@@ -1,24 +1,26 @@
 ﻿<Properties StartupConfiguration="{8A866B83-CC8F-4F24-8043-6EB8BD17C84F}|FrontToBack">
   <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Comment.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/CommentController.cs">
     <Files>
-      <File FileName="DAL/Context.cs" Line="1" Column="1" IsPinned="True" />
-      <File FileName="Views/Product/Detail.cshtml" Line="144" Column="82" />
-      <File FileName="Controllers/CommentController.cs" Line="38" Column="1" />
-      <File FileName="Areas/AdminArea/Controllers/UserController.cs" Line="75" Column="42" />
-      <File FileName="Models/Comment.cs" Line="18" Column="22" />
-      <File FileName="Controllers/ProductController.cs" Line="63" Column="21" />
+      <File FileName="Views/Product/Detail.cshtml" Line="128" Column="66" />
+      <File FileName="Controllers/CommentController.cs" Line="93" Column="1" />
+      <File FileName="Models/Comment.cs" Line="10" Column="23" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FrontToBack" expanded="True">
             <Node name="FronToBack" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="DAL" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="Comment.cs" selected="True" />
+              <Node name="Areas" expanded="True">
+                <Node name="AdminArea" expanded="True">
+                  <Node name="Controllers" expanded="True" />
+                </Node>
               </Node>
+              <Node name="Controllers" expanded="True">
+                <Node name="CommentController.cs" selected="True" />
+              </Node>
+              <Node name="DAL" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Category" expanded="True" />

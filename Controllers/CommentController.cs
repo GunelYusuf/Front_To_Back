@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using FronToBack.Models;
 using FrontToBack.DAL;
@@ -56,6 +58,41 @@ namespace FronToBack.Controllers
             
             return RedirectToAction("Index");
 
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> Delete(int? id)
+        {
+            if (id==null) return RedirectToAction("Index");
+            Comment comment = _context.Comment.Find(id);
+            if (comment==null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                _context.Comment.Remove(comment);
+                await _context.SaveChangesAsync();
+            }
+          return RedirectToAction("Index");
+
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Update(int? id,Comment comment)
+        {
+            if (id == null) return RedirectToAction("Index");
+            Comment comments = _context.Comment.Find(id);
+            if (comment == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                comments.Comments = comment.Comments;
+                await _context.SaveChangesAsync();
+            }
+            return RedirectToAction("Index");
         }
 
     }
