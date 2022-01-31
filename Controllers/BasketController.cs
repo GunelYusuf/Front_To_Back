@@ -132,6 +132,9 @@ namespace FrontToBack.Controllers
             {
               
                 PRODUCTS1 dbProduct = await _context.pRODUCTS1s.FindAsync(basketProduct.Id);
+
+                await UpdateProductCount(dbProduct, basketProduct);
+
                 ProductSales productSales = new ProductSales();
                 productSales.SalesId = sales.Id;
                 productSales.PRODUCTS1Id = dbProduct.Id;
@@ -146,6 +149,12 @@ namespace FrontToBack.Controllers
             await _context.SaveChangesAsync();
 
             return RedirectToAction("Index", "Home");
+        }
+
+        private async Task UpdateProductCount(PRODUCTS1 dbProduct,BasketProduct basketProduct)
+        {
+            dbProduct.Count = dbProduct.Count - basketProduct.Count;
+            await _context.SaveChangesAsync();
         }
     }
 }
