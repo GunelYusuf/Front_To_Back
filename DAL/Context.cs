@@ -34,6 +34,10 @@ namespace FrontToBack.DAL
 
         public DbSet<Footer> Footers { get; set; }
 
+        public DbSet<Sales> Sales { get; set; }
+
+        public DbSet<ProductSales> ProductSales{ get; set; }
+
 
 
     }

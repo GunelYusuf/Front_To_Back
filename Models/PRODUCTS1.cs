@@ -27,5 +27,9 @@ namespace FrontToBack.Models
 
         public IEnumerable<Comment> CommentProduct { get; set; }
 
+        public int Count { get; set; }
+
+        public List<ProductSales> ProductSales { get; set; }
+
     }
 }
