@@ -45,6 +45,7 @@
     <None Remove="Views\Account\" />
     <None Remove="Areas\AdminArea\Views\User\" />
     <None Remove="MailKit" />
+    <None Remove="Areas\AdminArea\Views\Sale\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -78,6 +79,7 @@
     <Folder Include="Areas\AdminArea\Views\Product\" />
     <Folder Include="Views\Account\" />
     <Folder Include="Areas\AdminArea\Views\User\" />
+    <Folder Include="Areas\AdminArea\Views\Sale\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
