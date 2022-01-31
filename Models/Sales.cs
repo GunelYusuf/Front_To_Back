@@ -14,6 +14,8 @@ namespace FronToBack.Models
 
         public AppUser AppUser { get; set; }
 
+        public DateTime SaleDate { get; set; }
+
         public List<ProductSales> ProductSales { get; set; }
     }
 }

@@ -1,5 +1,15 @@
 ﻿@model HomeVM
 
+
+<div class="container">
+    <div class="row">
+        @if (@TempData["Success"] != null)
+         {
+            <div id="successAlert" class="alert alert-success">@TempData["Success"]</div>
+         }
+
+    </div>
+</div>
 <main>
     <section id="bigSlider" style="width: 100%; height: 474px;">
         <div class="title">
@@ -285,3 +295,16 @@
         </div>
     </section>
 </main>
+
+@section Scripts
+{
+    <script>
+        let successAlert = document.getElementById("successAlert");
+
+        setTimeout(() => {
+            successAlert.remove();
+        },2000)
+
+    </script>
+
+}

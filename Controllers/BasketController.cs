@@ -124,14 +124,29 @@ namespace FrontToBack.Controllers
 
             Sales sales = new Sales();
             sales.AppUserId = user.Id;
+            sales.SaleDate = DateTime.Now;
 
             List<BasketProduct> basketProducts = JsonConvert.DeserializeObject<List<BasketProduct>>(Request.Cookies["basketCookie"]);
             List<ProductSales> productSalesList = new List<ProductSales>();
+
+
+            List<PRODUCTS1> dbProducts = new List<PRODUCTS1>();
+            foreach (var item in basketProducts)
+            {
+                PRODUCTS1 dbProduct = await _context.pRODUCTS1s.FindAsync(item.Id);
+                if (dbProduct.Count<item.Count)
+                {
+                    TempData["Failed"] = $"{item.Name} is not in the database";
+                    return RedirectToAction("ShowBaket", "Basket");
+                }
+                dbProducts.Add(dbProduct);
+             
+            }
+
             double total = 0;
             foreach (var basketProduct in basketProducts)
             {
-              
-                PRODUCTS1 dbProduct = await _context.pRODUCTS1s.FindAsync(basketProduct.Id);
+                PRODUCTS1 dbProduct = dbProducts.Find(p => p.Id == basketProduct.Id);
 
                 await UpdateProductCount(dbProduct, basketProduct);
 
@@ -147,13 +162,13 @@ namespace FrontToBack.Controllers
             sales.Total = total;
             await _context.Sales.AddAsync(sales);
             await _context.SaveChangesAsync();
-
+            TempData["Success"] = "The sale was completed successfully";
             return RedirectToAction("Index", "Home");
         }
 
-        private async Task UpdateProductCount(PRODUCTS1 dbProduct,BasketProduct basketProduct)
+        private async Task UpdateProductCount(PRODUCTS1 product,BasketProduct basketProduct)
         {
-            dbProduct.Count = dbProduct.Count - basketProduct.Count;
+            product.Count = product.Count - basketProduct.Count;
             await _context.SaveChangesAsync();
         }
     }
