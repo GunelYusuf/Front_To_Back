@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using FronToBack.Models;
 using FrontToBack.DAL;
 using FrontToBack.Models;
 using FrontToBack.ViewModels;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -17,9 +19,12 @@ namespace FrontToBack.Controllers
     public class BasketController : Controller
     {
         private readonly Context _context;
-        public BasketController(Context context)
+        private readonly UserManager<AppUser> _userManager;
+
+        public BasketController(Context context,UserManager<AppUser>userManager)
         {
             _context = context;
+           _userManager = userManager;
         }
         public IActionResult Index()
         {
@@ -109,6 +114,38 @@ namespace FrontToBack.Controllers
             basketProductList.Remove(isExistProduct);
             Response.Cookies.Append("basketCookie", JsonConvert.SerializeObject(basketProductList), new CookieOptions { MaxAge = TimeSpan.FromMinutes(14) });
             return View(basketProductList);
+        }
+
+        public async Task<IActionResult> Sale()
+        {
+            if (!User.Identity.IsAuthenticated) return RedirectToAction("LogIn", "Account");
+
+            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            Sales sales = new Sales();
+            sales.AppUserId = user.Id;
+
+            List<BasketProduct> basketProducts = JsonConvert.DeserializeObject<List<BasketProduct>>(Request.Cookies["basketCookie"]);
+            List<ProductSales> productSalesList = new List<ProductSales>();
+            double total = 0;
+            foreach (var basketProduct in basketProducts)
+            {
+              
+                PRODUCTS1 dbProduct = await _context.pRODUCTS1s.FindAsync(basketProduct.Id);
+                ProductSales productSales = new ProductSales();
+                productSales.SalesId = sales.Id;
+                productSales.PRODUCTS1Id = dbProduct.Id;
+
+                productSalesList.Add(productSales);
+                total += basketProduct.Count * basketProduct.Price;
+            }
+
+            sales.ProductSales = productSalesList;
+            sales.Total = total;
+            await _context.Sales.AddAsync(sales);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }

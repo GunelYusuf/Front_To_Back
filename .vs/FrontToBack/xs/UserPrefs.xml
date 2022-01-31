@@ -1,21 +1,22 @@
 ﻿<Properties StartupConfiguration="{8A866B83-CC8F-4F24-8043-6EB8BD17C84F}|FrontToBack">
   <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="DAL/Context.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/BasketController.cs">
     <Files>
-      <File FileName="Models/Sales.cs" Line="17" Column="47" />
-      <File FileName="Models/AppUser.cs" Line="18" Column="8" />
-      <File FileName="Models/PRODUCTS1.cs" Line="32" Column="47" />
-      <File FileName="Models/ProductSales.cs" Line="11" Column="1" />
-      <File FileName="DAL/Context.cs" Line="37" Column="22" />
+      <File FileName="Views/Basket/ShowBasket.cshtml" Line="62" Column="20" />
+      <File FileName="Controllers/BasketController.cs" Line="149" Column="1" />
+      <File FileName="Models/Sales.cs" Line="1" Column="1" />
+      <File FileName="Models/PRODUCTS1.cs" Line="1" Column="1" />
+      <File FileName="Models/AppUser.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FrontToBack" expanded="True">
             <Node name="FronToBack" expanded="True">
-              <Node name="DAL" expanded="True">
-                <Node name="Context.cs" selected="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="BasketController.cs" selected="True" />
               </Node>
+              <Node name="DAL" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="ViewComponents" expanded="True" />
               <Node name="ViewModels" expanded="True" />
