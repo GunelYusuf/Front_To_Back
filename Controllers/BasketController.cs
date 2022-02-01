@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using FronToBack.Models;
@@ -163,6 +165,22 @@ namespace FrontToBack.Controllers
             await _context.Sales.AddAsync(sales);
             await _context.SaveChangesAsync();
             TempData["Success"] = "The sale was completed successfully";
+            using (MailMessage mail = new MailMessage())
+            {
+                mail.From = new MailAddress("guntebrustemov@gmail.com", "Succes Sale!");
+                mail.To.Add(user.Email);
+                mail.Subject = "Successfully";
+                mail.Body = "The sale was completed successfully!";
+                mail.IsBodyHtml = true;
+
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    smtp.Credentials = new NetworkCredential("guntebrustemov", "gunteb7@");
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
+
+                }
+            }
             return RedirectToAction("Index", "Home");
         }
 
