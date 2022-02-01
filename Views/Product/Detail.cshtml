@@ -117,18 +117,29 @@
                 </div>
                 <div class="review">
                     <div class="info">
-                       @foreach (var item in Model.CommentProduct)
+                        @foreach (var item in Model.CommentProduct)
                         {
-                            @*<span>@item.User.FullName</span> <span> 21.03.2022</span>*@
-                            <p>
-                                @item.Comments <a class="btn btn-outline-danger" asp-controller="Comment" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                            </p>
-                            <form asp-controller="Comment" asp-action="Update" method="post">
-                                <input type="hidden" value="@item.Id" name="id" />
-                                <input type="text" name="Comments" /><br /><br />
+                            if (item.UserId == ViewBag.UserID)
+                            {
+                                @*<span>@item.User.FullName</span> <span> 21.03.2022</span>*@
+                                <p>
+                                    @item.Comments <a class="btn btn-outline-danger" asp-controller="Comment" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                </p>
+                                <form asp-controller="Comment" asp-action="Update" method="post">
+                                    <input type="hidden" value="@item.Id" name="id" />
+                                    <input type="text" name="Comments" /><br /><br />
 
-                                <button class="btn btn-outline-success" type="submit">SUBMIT</button>
-                            </form>
+                                    <button class="btn btn-outline-success" type="submit">SUBMIT</button>
+                                </form>
+                            }
+                            else
+                            {
+                                @*<span>@item.User.FullName</span> <span> 21.03.2022</span>*@
+                                <p>
+                                    @item.Comments
+                                </p>
+                            }
+
                         }
 
                     </div>

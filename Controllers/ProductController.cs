@@ -61,8 +61,8 @@ namespace FrontToBack.Controllers
 
             PRODUCTS1 pRODUCTS1 = _context.pRODUCTS1s.Include(c => c.CATEGORY1).FirstOrDefault(p => p.Id == id);
             ViewBag.ProductID =pRODUCTS1.Id;
-            //var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
-            //ViewBag.UserID = userId;
+            var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            ViewBag.UserID = userId;
             PRODUCTS1 pRODUCTS = new PRODUCTS1
             {
                 Name = pRODUCTS1.Name,

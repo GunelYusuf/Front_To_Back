@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using FronToBack.Models;
 using FrontToBack.DAL;
@@ -55,15 +56,26 @@ namespace FronToBack.Controllers
             {
                 return RedirectToAction("Login", "Account");
             }
-            
-            return RedirectToAction("Index");
+
+            return RedirectToAction("Detail", "Product",new { id=comment.PRODUCTS1Id }  );
 
         }
 
         [HttpGet]
         public async Task<ActionResult> Delete(int? id)
         {
+            string userId = "";
+            if (User.Identity.IsAuthenticated)
+            {
+                userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            }
+            else
+            {
+                RedirectToAction("LogIn", "Account");
+            }
+
             if (id==null) return RedirectToAction("Index");
+
             Comment comment = _context.Comment.Find(id);
             if (comment==null)
             {
@@ -71,10 +83,14 @@ namespace FronToBack.Controllers
             }
             else
             {
-                _context.Comment.Remove(comment);
-                await _context.SaveChangesAsync();
+                if (comment.UserId == userId)
+                {
+                    _context.Comment.Remove(comment);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction("Detail", "Product", new { id = comment.PRODUCTS1Id });
+                }
             }
-          return RedirectToAction("Index");
+            return RedirectToAction("Index");
 
         }
 
@@ -83,16 +99,32 @@ namespace FronToBack.Controllers
 
         public async Task<IActionResult> Update(int? id, Comment comment)
         {
+            string userId = "";
+            if (User.Identity.IsAuthenticated)
+            {
+                 userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            }
+            else
+            {
+                RedirectToAction("LogIn", "Account");
+            }
+
             if (id == null) return RedirectToAction("Index");
+
             Comment comments = _context.Comment.Find(id);
-            if (comment == null)
+            if (comments == null)
             {
                 return NotFound();
             }
             else
             {
-                comments.Comments = comment.Comments;
-                await _context.SaveChangesAsync();
+                if (comments.UserId==userId)
+                {
+                    comments.Comments = comment.Comments;
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction("Detail", "Product", new { id = comments.PRODUCTS1Id });
+                }
+               
             }
             return RedirectToAction("Index");
         }

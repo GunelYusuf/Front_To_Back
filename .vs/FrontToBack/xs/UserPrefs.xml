@@ -1,8 +1,10 @@
 ﻿<Properties StartupConfiguration="{8A866B83-CC8F-4F24-8043-6EB8BD17C84F}|FrontToBack">
   <MonoDevelop.Ide.ItemProperties.FronToBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/BasketController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/ProductController.cs">
     <Files>
-      <File FileName="Controllers/BasketController.cs" Line="1" Column="1" />
+      <File FileName="Controllers/CommentController.cs" Line="59" Column="56" />
+      <File FileName="Views/Product/Detail.cshtml" Line="1" Column="1" />
+      <File FileName="Controllers/ProductController.cs" Line="63" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,9 +12,12 @@
           <Node name="FrontToBack" expanded="True">
             <Node name="FronToBack" expanded="True">
               <Node name="Controllers" expanded="True">
-                <Node name="BasketController.cs" selected="True" />
+                <Node name="ProductController.cs" selected="True" />
               </Node>
               <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Product" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
